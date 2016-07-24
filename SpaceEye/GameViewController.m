@@ -11,6 +11,7 @@
 
 @interface GameViewController()
 
+
 @property SCNNode *sun;
 @property SCNNode *mercury;
 @property SCNNode *venus;
@@ -44,8 +45,23 @@
 - (void)setup {
     // create a new scene
     self.scene = [SCNScene sceneNamed:@"art.scnassets/SolarSystem.scn"];
-    [self setupSceneElements:self.scene];
-
+    
+    self.sun = [self.scene.rootNode childNodeWithName:@"Sun" recursively:YES];
+    [self.sun runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:2 z:0 duration:5]]];
+    
+    [self setupSceneElements:self.scene Node:_mercury NodeName:@"Mercury" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
+    [self setupSceneElements:self.scene Node:_venus NodeName:@"Venus" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
+    [self setupSceneElements:self.scene Node:_earth NodeName:@"Earth" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
+    [self setupSceneElements:self.scene Node:_mars NodeName:@"Mars" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
+    [self setupSceneElements:self.scene Node:_jupiter NodeName:@"Jupiter" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
+    [self setupSceneElements:self.scene Node:_saturn NodeName:@"Saturn" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
+    [self setupSceneElements:self.scene Node:_uranus NodeName:@"Uranus" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
+    [self setupSceneElements:self.scene Node:_neptune NodeName:@"Neptune" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
+    [self setupSceneElements:self.scene Node:_pluto NodeName:@"Pluto" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
+  
+    
+    [self setInOrbit:_jupiter Action:[SCNAction moveTo:SCNVector3Make(20, 10, 0) duration:1]];
+    
     //     create and add a camera to the scene
     _cameraNode = [SCNNode node];
     _cameraNode.camera = [SCNCamera camera];
@@ -63,109 +79,54 @@
     // set the scene to the view
     self.scnView.scene = self.scene;
     
-//    self.scnView.showsStatistics = YES;   // For Debugging.
-    
     self.scene.background.contents =  [UIImage imageNamed:@"Background"];
     
     // add a tap gesture recognizer
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    tapGesture.numberOfTapsRequired = 2;
     NSMutableArray *gestureRecognizers = [NSMutableArray array];
     [gestureRecognizers addObject:tapGesture];
     [gestureRecognizers addObjectsFromArray: self.scnView.gestureRecognizers];
+    
+    UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+    doubleTapGesture.numberOfTapsRequired = 3;
+    [gestureRecognizers addObject:doubleTapGesture];
+    [gestureRecognizers addObjectsFromArray: self.scnView.gestureRecognizers];
+    
+    
     self.scnView.gestureRecognizers = gestureRecognizers;
+
     
 }
 
 
-
-- (void)setupSceneElements : (SCNScene*)scene {
-     self.sun = [scene.rootNode childNodeWithName:@"Sun" recursively:YES];
-    [self.sun runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:4]]];
+- (void)setupSceneElements : (SCNScene*)scene Node:(SCNNode*)node NodeName:(NSString*)nodeName Action:(SCNAction *)action{
     
-    self.mercury =  [scene.rootNode childNodeWithName:@"Mercury" recursively:YES];
-    [self.mercury runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
-   self.mercury.pivot = SCNMatrix4MakeTranslation (30,0,0);
-  
-    self.venus = [scene.rootNode childNodeWithName:@"Venus" recursively:YES];
-    [self.venus runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
-  self.venus.pivot = SCNMatrix4MakeTranslation (40,0,0);
-    [_sun addChildNode:_venus];
-
-
-    self.earth = [scene.rootNode childNodeWithName:@"Earth" recursively:YES];
-    [self.earth runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
-    self.earth.pivot = SCNMatrix4MakeTranslation (50,0,0);
-    
-   
-    
-
-    self.mars = [scene.rootNode childNodeWithName:@"Mars" recursively:YES];
-    [self.mars runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
-   self.mars.pivot = SCNMatrix4MakeTranslation (60,0,0);
-
-    self.jupiter = [scene.rootNode childNodeWithName:@"Jupiter" recursively:YES];
-    [self.jupiter runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
-    self.jupiter.pivot = SCNMatrix4MakeTranslation (70,0,0);
-    
-
-    self.saturn = [scene.rootNode childNodeWithName:@"Saturn" recursively:YES];
-    [self.saturn runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
-    self.saturn.pivot = SCNMatrix4MakeTranslation (80,0,0);
-    
-    self.uranus = [scene.rootNode childNodeWithName:@"Uranus" recursively:YES];
-    [self.uranus runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
-   self.uranus.pivot = SCNMatrix4MakeTranslation (90,0,0);
-
-
-    self.neptune = [scene.rootNode childNodeWithName:@"Neptune" recursively:YES];
-    [self.neptune runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
-   self.neptune.pivot = SCNMatrix4MakeTranslation (100,0,0);
-
-    self.pluto = [scene.rootNode childNodeWithName:@"Pluto" recursively:YES];
-    [self.pluto runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
-   self.pluto.pivot = SCNMatrix4MakeTranslation (110,0,0);
+    node =  [scene.rootNode childNodeWithName:nodeName recursively:YES];
+    [node runAction:[SCNAction repeatActionForever:action]];
+//  [_sun addChildNode:node];
 }
 
-
+- (void) setInOrbit: (SCNNode*)node Action:(SCNAction *)action{
+      [node runAction:[SCNAction repeatActionForever:action]];
+}
 
 
 
 - (void) handleTap:(UIGestureRecognizer*)gestureRecognize
 {
-    // retrieve the SCNView
-    SCNView *scnView = (SCNView *)self.view;
-    
-    // check what nodes are tapped
-    CGPoint p = [gestureRecognize locationInView:scnView];
-    NSArray *hitResults = [scnView hitTest:p options:nil];
-    
-    // check that we clicked on at least one object
-    if([hitResults count] > 0){
-        // retrieved the first clicked object
-        SCNHitTestResult *result = [hitResults objectAtIndex:0];
-        
-        // get its material
-        SCNMaterial *material = result.node.geometry.firstMaterial;
-        
-        // highlight it
-        [SCNTransaction begin];
-        [SCNTransaction setAnimationDuration:0.5];
-        
-        // on completion - unhighlight
-        [SCNTransaction setCompletionBlock:^{
-            [SCNTransaction begin];
-            [SCNTransaction setAnimationDuration:0.5];
-            
-            material.emission.contents = [UIColor redColor];
-            
-            [SCNTransaction commit];
-        }];
-        
-        material.emission.contents = [UIColor redColor];
-        
-        [SCNTransaction commit];
-    }
+    NSLog(@"Singel Tab");
 }
+
+- (void) handleDoubleTap:(UIGestureRecognizer*)gestureRecognize
+{
+
+    
+            NSLog(@"Double Tab working");
+        
+        
+}
+
 
 - (BOOL)shouldAutorotate
 {
