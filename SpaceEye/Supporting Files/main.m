@@ -1,9 +1,9 @@
 //
 //  main.m
-//  rrrrrrr
 //
-//  Created by OmarRO on 7/20/16.
-//  Copyright © 2016 OmarRO. All rights reserved.
+//
+//  Created by Aman Hafaz on 7/20/16.
+//  Copyright © 2016 Aman Hafaz. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

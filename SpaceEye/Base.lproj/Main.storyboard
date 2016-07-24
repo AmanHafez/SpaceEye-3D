@@ -9,7 +9,7 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameViewController" id="BV1-FR-VrT" customClass="GameViewController" sceneMemberID="viewController">
                     <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="SolarSystem" id="3se-qz-xqx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,10 +20,10 @@
             </objects>
             <point key="canvasLocation" x="277" y="158"/>
         </scene>
-        <!--Planet Info View Controller-->
+        <!--Planets Informations-->
         <scene sceneID="6hG-Pd-36R">
             <objects>
-                <viewController id="U6w-Iw-jjy" customClass="PlanetInfoViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlanetInfoViewController" title="Planets Informations" id="U6w-Iw-jjy" customClass="PlanetInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CWg-fa-6cg"/>
                         <viewControllerLayoutGuide type="bottom" id="yUB-05-cEX"/>
@@ -32,7 +32,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vvf-qh-F0p">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="WJ3-Yb-YRz">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jupiter" translatesAutoresizingMaskIntoConstraints="NO" id="vvf-qh-F0p">
                                 <rect key="frame" x="0.0" y="180" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="eRi-Vb-ani"/>
@@ -44,24 +47,42 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="NiG-NN-7bA" firstAttribute="leading" secondItem="vvf-qh-F0p" secondAttribute="trailing" id="1zn-nW-VHn"/>
+                            <constraint firstAttribute="trailing" secondItem="WJ3-Yb-YRz" secondAttribute="trailing" id="3oM-af-Lmp"/>
+                            <constraint firstItem="WJ3-Yb-YRz" firstAttribute="leading" secondItem="6be-d8-YRr" secondAttribute="leading" id="49t-Bv-eYk"/>
+                            <constraint firstItem="WJ3-Yb-YRz" firstAttribute="top" secondItem="CWg-fa-6cg" secondAttribute="bottom" id="8s6-rh-2vl"/>
                             <constraint firstItem="NiG-NN-7bA" firstAttribute="top" secondItem="6be-d8-YRr" secondAttribute="topMargin" id="B0m-54-ZNm"/>
                             <constraint firstItem="vvf-qh-F0p" firstAttribute="centerY" secondItem="6be-d8-YRr" secondAttribute="centerY" id="Mc7-fU-ANv"/>
                             <constraint firstItem="vvf-qh-F0p" firstAttribute="leading" secondItem="6be-d8-YRr" secondAttribute="leading" id="bey-nu-WYJ"/>
                             <constraint firstAttribute="trailing" secondItem="NiG-NN-7bA" secondAttribute="trailing" id="cJf-fe-SgT"/>
+                            <constraint firstItem="yUB-05-cEX" firstAttribute="top" secondItem="WJ3-Yb-YRz" secondAttribute="bottom" id="hw5-VG-1UA"/>
                             <constraint firstItem="yUB-05-cEX" firstAttribute="top" secondItem="NiG-NN-7bA" secondAttribute="bottom" id="vkh-yC-lqF"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="AuY-DU-nAU" appends="YES" id="ZQd-6X-yu2"/>
+                        </connections>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="img" destination="vvf-qh-F0p" id="PXy-ki-YpD"/>
                         <outlet property="planetInfoTable" destination="NiG-NN-7bA" id="3fk-ye-McF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0G9-4r-glG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="AuY-DU-nAU">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="swapBack:" destination="U6w-Iw-jjy" id="oqp-GN-EWP"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-293" y="926"/>
+            <point key="canvasLocation" x="1291" y="198"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="656" height="480"/>
+        <image name="Jupiter" width="684" height="653"/>
+    </resources>
 </document>

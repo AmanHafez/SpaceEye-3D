@@ -1,13 +1,13 @@
 //
 //  GameViewController.m
-//  rrrrrrr
 //
-//  Created by OmarRO on 7/20/16.
-//  Copyright (c) 2016 OmarRO. All rights reserved.
+//
+//  Created by Aman Hafaz on 7/20/16.
+//  Copyright (c) 2016 Aman Hafaz. All rights reserved.
 //
 
 #import "GameViewController.h"
-
+#import "PlanetInfoViewController.h"
 
 @interface GameViewController()
 
@@ -84,18 +84,18 @@
     // add a tap gesture recognizer
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     tapGesture.numberOfTapsRequired = 2;
+    
     NSMutableArray *gestureRecognizers = [NSMutableArray array];
     [gestureRecognizers addObject:tapGesture];
     [gestureRecognizers addObjectsFromArray: self.scnView.gestureRecognizers];
     
-    UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
-    doubleTapGesture.numberOfTapsRequired = 3;
-    [gestureRecognizers addObject:doubleTapGesture];
-    [gestureRecognizers addObjectsFromArray: self.scnView.gestureRecognizers];
-    
-    
     self.scnView.gestureRecognizers = gestureRecognizers;
-
+ 
+    
+    UILongPressGestureRecognizer *longPressGestureRecognizer=[[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPressRecognizer:)];
+    longPressGestureRecognizer.numberOfTouchesRequired=1;
+    longPressGestureRecognizer.minimumPressDuration = 0.5f;
+    [self.scnView addGestureRecognizer:longPressGestureRecognizer];
     
 }
 
@@ -115,15 +115,42 @@
 
 - (void) handleTap:(UIGestureRecognizer*)gestureRecognize
 {
-    NSLog(@"Singel Tab");
-}
-
-- (void) handleDoubleTap:(UIGestureRecognizer*)gestureRecognize
-{
+    // retrieve the SCNView
+    SCNView *scnView = (SCNView *)self.view;
+    
+    // check what nodes are tapped
+    CGPoint p = [gestureRecognize locationInView:scnView];
+    NSArray *hitResults = [scnView hitTest:p options:nil];
+    
+    // check that we clicked on at least one object
+    if([hitResults count] > 0){
+        if( [[[[hitResults firstObject]node]name]isEqualToString:@"Sun"]){
+            PlanetInfoViewController *planetInfo = [self.storyboard instantiateViewControllerWithIdentifier:@"PlanetInfoViewController"];
+            [self presentViewController:planetInfo animated:YES completion:nil];
+        }
+    }
 
     
-            NSLog(@"Double Tab working");
-        
+}
+
+
+
+- (void) handleLongPressRecognizer:(UILongPressGestureRecognizer*)gestureRecognize
+{
+    // retrieve the SCNView
+    SCNView *scnView = (SCNView *)self.view;
+    
+    // check what nodes are tapped
+    CGPoint p = [gestureRecognize locationInView:scnView];
+    NSArray *hitResults = [scnView hitTest:p options:nil];
+    
+    // check that we clicked on at least one object
+    if([hitResults count] > 0){
+        if( [[[[hitResults firstObject]node]name]isEqualToString:@"Sun"]){
+            NSLog(@"Hi i'm long press");
+        }
+    }
+    
         
 }
 

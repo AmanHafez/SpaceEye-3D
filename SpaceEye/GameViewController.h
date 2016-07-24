@@ -1,9 +1,9 @@
 //
 //  GameViewController.h
-//  rrrrrrr
+//
 //
 
-//  Copyright (c) 2016 OmarRO. All rights reserved.
+//  Copyright (c) 2016 Aman Hafaz. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -2,12 +2,13 @@
 //  PlanetInfoViewController.m
 //  SpaceEye
 //
-//  Created by Omar Almasri on 7/23/16.
-//  Copyright © 2016 OmarRO. All rights reserved.
+//  Created by Aman Hafaz on 7/23/16.
+//  Copyright © 2016 Aman Hafaz. All rights reserved.
 //
 
 #import "PlanetInfoViewController.h"
 #import "PlanetsTableViewCell.h"
+#import "GameViewController.h"
 #import "SEPlanet.h"
 
 @interface PlanetInfoViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -17,18 +18,28 @@
 @property (nonatomic,strong)NSArray *planetInfo;
 
 
-
 @end
 
 @implementation PlanetInfoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = @"Planets Informations";
+    _img.image =[UIImage imageNamed:@"Earth"];
+ 
 }
 
 - (void) loadData {
     
+}
+- (IBAction)swapBack:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+//    GameViewController *planetOrbit = planetOrbit = [self.storyboard instantiateViewControllerWithIdentifier:@"GameViewController"];
+//
+//    [self presentViewController:planetOrbit animated:YES completion:nil];
+    
+
 }
 
 #pragma mark - table view
