@@ -49,12 +49,8 @@
     //     create and add a camera to the scene
     _cameraNode = [SCNNode node];
     _cameraNode.camera = [SCNCamera camera];
-    
-    _cameraNode.constraints =  @[[SCNLookAtConstraint lookAtConstraintWithTarget:_sun] ];
     _cameraNode.camera.automaticallyAdjustsZRange = YES;
     [_scene.rootNode addChildNode:_cameraNode];
-     
-    
     
     
     // allows the user to manipulate the camera
@@ -67,11 +63,9 @@
     // set the scene to the view
     self.scnView.scene = self.scene;
     
-    self.scnView.showsStatistics = YES;   // For Debugging.
+//    self.scnView.showsStatistics = YES;   // For Debugging.
     
-    // configure the view
-    self.scnView.backgroundColor = [UIColor whiteColor];
-    //   scene.background.contents =  @[@"Background", @"Background", @"Background", @"Background", @"Background", @"Background"];
+    self.scene.background.contents =  [UIImage imageNamed:@"Background"];
     
     // add a tap gesture recognizer
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
@@ -88,14 +82,15 @@
      self.sun = [scene.rootNode childNodeWithName:@"Sun" recursively:YES];
     [self.sun runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:4]]];
     
-    self.mercury = [scene.rootNode childNodeWithName:@"Mercury" recursively:YES];
+    self.mercury =  [scene.rootNode childNodeWithName:@"Mercury" recursively:YES];
     [self.mercury runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
    self.mercury.pivot = SCNMatrix4MakeTranslation (30,0,0);
   
     self.venus = [scene.rootNode childNodeWithName:@"Venus" recursively:YES];
     [self.venus runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
   self.venus.pivot = SCNMatrix4MakeTranslation (40,0,0);
-    
+    [_sun addChildNode:_venus];
+
 
     self.earth = [scene.rootNode childNodeWithName:@"Earth" recursively:YES];
     [self.earth runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
@@ -161,7 +156,7 @@
             [SCNTransaction begin];
             [SCNTransaction setAnimationDuration:0.5];
             
-            material.emission.contents = [UIColor blackColor];
+            material.emission.contents = [UIColor redColor];
             
             [SCNTransaction commit];
         }];

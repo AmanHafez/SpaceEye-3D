@@ -15,9 +15,6 @@
 
 - (void) test {
     
-//    NSString *paths = [[NSBundle mainBundle] pathForResource:@"SolarSystemData" ofType:@"plist"];
-//    NSDictionary *navigationItems = [[NSMutableDictionary alloc] initWithContentsOfFile:paths];
-    
     NSDictionary *dictRoot = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SolarSystemData" ofType:@"plist"]];
 
     NSMutableArray * proveMe =[dictRoot valueForKey:@"Item 0"];
