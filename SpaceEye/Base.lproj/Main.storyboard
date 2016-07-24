@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" sceneMemberID="viewController">
+                    <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="SolarSystem" id="3se-qz-xqx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </sceneKitView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277" y="158"/>
+        </scene>
+        <!--Planet Info View Controller-->
+        <scene sceneID="6hG-Pd-36R">
+            <objects>
+                <viewController id="U6w-Iw-jjy" customClass="PlanetInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CWg-fa-6cg"/>
+                        <viewControllerLayoutGuide type="bottom" id="yUB-05-cEX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFit" id="6be-d8-YRr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vvf-qh-F0p">
+                                <rect key="frame" x="0.0" y="180" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="eRi-Vb-ani"/>
+                                    <constraint firstAttribute="width" constant="240" id="loS-Jv-38q"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NiG-NN-7bA">
+                                <rect key="frame" x="240" y="0.0" width="360" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NiG-NN-7bA" firstAttribute="leading" secondItem="vvf-qh-F0p" secondAttribute="trailing" id="1zn-nW-VHn"/>
+                            <constraint firstItem="NiG-NN-7bA" firstAttribute="top" secondItem="6be-d8-YRr" secondAttribute="topMargin" id="B0m-54-ZNm"/>
+                            <constraint firstItem="vvf-qh-F0p" firstAttribute="centerY" secondItem="6be-d8-YRr" secondAttribute="centerY" id="Mc7-fU-ANv"/>
+                            <constraint firstItem="vvf-qh-F0p" firstAttribute="leading" secondItem="6be-d8-YRr" secondAttribute="leading" id="bey-nu-WYJ"/>
+                            <constraint firstAttribute="trailing" secondItem="NiG-NN-7bA" secondAttribute="trailing" id="cJf-fe-SgT"/>
+                            <constraint firstItem="yUB-05-cEX" firstAttribute="top" secondItem="NiG-NN-7bA" secondAttribute="bottom" id="vkh-yC-lqF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="img" destination="vvf-qh-F0p" id="PXy-ki-YpD"/>
+                        <outlet property="planetInfoTable" destination="NiG-NN-7bA" id="3fk-ye-McF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0G9-4r-glG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231" y="914"/>
+        </scene>
+    </scenes>
+</document>

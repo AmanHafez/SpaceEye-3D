@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Item 0</key>
+	<dict>
+		<key>Name</key>
+		<string>Mercury</string>
+		<key>Mass</key>
+		<string>0.33</string>
+		<key>Diameter</key>
+		<string>4879</string>
+		<key>Density</key>
+		<string>5427</string>
+		<key>Gravity</key>
+		<string>3.7</string>
+		<key>Escape Velocity</key>
+		<string>4.3</string>
+		<key>Rotation Period</key>
+		<string>1407.6</string>
+		<key>Length of Day</key>
+		<string>4222.6</string>
+		<key>Distance from Sun</key>
+		<string>57.9</string>
+		<key>Perihelion</key>
+		<string>46</string>
+		<key>Aphelion</key>
+		<string>69.8</string>
+		<key>Orbital Period</key>
+		<string>88</string>
+		<key>Orbital Velocity</key>
+		<string>47.4</string>
+		<key>Orbital Inclination</key>
+		<string>7</string>
+		<key>Orbital Eccentricity</key>
+		<string>0.205</string>
+		<key>Obliquity to Orbit</key>
+		<string>0.01</string>
+		<key>Mean Temperature</key>
+		<string>167</string>
+		<key>Surface Pressure</key>
+		<string>0</string>
+		<key>Number of Moons</key>
+		<string>0</string>
+		<key>Ring System</key>
+		<false/>
+		<key>Global Magnetic Field</key>
+		<true/>
+	</dict>
+	<key>Item 1</key>
+	<dict>
+		<key>Name</key>
+		<string>Venus</string>
+		<key>Mass</key>
+		<string>4.87</string>
+		<key>Diameter</key>
+		<string>12104</string>
+		<key>Density</key>
+		<string>5243</string>
+		<key>Gravity</key>
+		<string>8.9</string>
+		<key>Escape Velocity</key>
+		<string>10.4</string>
+		<key>Rotation Period</key>
+		<string>5832.5</string>
+		<key>Length of Day</key>
+		<string>2802</string>
+		<key>Distance from Sun</key>
+		<string>108.2</string>
+		<key>Perihelion</key>
+		<string>107.5</string>
+		<key>Aphelion</key>
+		<string>108.9</string>
+		<key>Orbital Period</key>
+		<string>224.7</string>
+		<key>Orbital Velocity</key>
+		<string>35</string>
+		<key>Orbital Inclination</key>
+		<string>3.4</string>
+		<key>Orbital Eccentricity</key>
+		<string>0.007</string>
+		<key>Obliquity to Orbit</key>
+		<string>177.4</string>
+		<key>Mean Temperature</key>
+		<string>464</string>
+		<key>Surface Pressure</key>
+		<string>92</string>
+		<key>Number of Moons</key>
+		<string>0</string>
+		<key>Ring System</key>
+		<false/>
+		<key>Global Magnetic Field</key>
+		<false/>
+	</dict>
+	<key>Item 2</key>
+	<dict>
+		<key>Name</key>
+		<string>Earth</string>
+		<key>Mass</key>
+		<string>5.97</string>
+		<key>Diameter</key>
+		<string>12756</string>
+		<key>Density</key>
+		<string>5514</string>
+		<key>Gravity</key>
+		<string>9.8</string>
+		<key>Escape Velocity</key>
+		<string>11.2</string>
+		<key>Rotation Period</key>
+		<string>23.9</string>
+		<key>Length of Day</key>
+		<string>24</string>
+		<key>Distance from Sun</key>
+		<string>149.6</string>
+		<key>Perihelion</key>
+		<string>147.1</string>
+		<key>Aphelion</key>
+		<string>152.1</string>
+		<key>Orbital Period</key>
+		<string>365.2</string>
+		<key>Orbital Velocity</key>
+		<string>29.8</string>
+		<key>Orbital Inclination</key>
+		<string>0</string>
+		<key>Orbital Eccentricity</key>
+		<string>0.017</string>
+		<key>Obliquity to Orbit</key>
+		<string>23.4</string>
+		<key>Mean Temperature</key>
+		<string>15</string>
+		<key>Surface Pressure</key>
+		<string>1</string>
+		<key>Number of Moons</key>
+		<string>1</string>
+		<key>Ring System</key>
+		<false/>
+		<key>Global Magnetic Field</key>
+		<true/>
+	</dict>
+	<key>Item 3</key>
+	<dict>
+		<key>Name</key>
+		<string>Moon</string>
+		<key>Mass</key>
+		<string>0.073</string>
+		<key>Diameter</key>
+		<string>3475</string>
+		<key>Density</key>
+		<string>3340</string>
+		<key>Gravity</key>
+		<string>1.6</string>
+		<key>Escape Velocity</key>
+		<string>2.4</string>
+		<key>Rotation Period</key>
+		<string>655.7</string>
+		<key>Length of Day</key>
+		<string>708.7</string>
+		<key>Distance from Sun</key>
+		<string>0.384</string>
+		<key>Perihelion</key>
+		<string>0.363</string>
+		<key>Aphelion</key>
+		<string>0.406</string>
+		<key>Orbital Period</key>
+		<string>27.3</string>
+		<key>Orbital Velocity</key>
+		<string>1</string>
+		<key>Orbital Inclination</key>
+		<string>5.1</string>
+		<key>Orbital Eccentricity</key>
+		<string>0.055</string>
+		<key>Obliquity to Orbit</key>
+		<string>6.7</string>
+		<key>Mean Temperature</key>
+		<string>-20</string>
+		<key>Surface Pressure</key>
+		<string>0</string>
+		<key>Number of Moons</key>
+		<string>0</string>
+		<key>Ring System</key>
+		<false/>
+		<key>Global Magnetic Field</key>
+		<false/>
+	</dict>
+	<key>Item 4</key>
+	<dict>
+		<key>Name</key>
+		<string>Mars</string>
+		<key>Mass</key>
+		<string>0.642</string>
+		<key>Diameter</key>
+		<string>6792</string>
+		<key>Density</key>
+		<string>3933</string>
+		<key>Gravity</key>
+		<string>3.7</string>
+		<key>Escape Velocity</key>
+		<string>5</string>
+		<key>Rotation Period</key>
+		<string>24.6</string>
+		<key>Length of Day</key>
+		<string>24.7</string>
+		<key>Distance from Sun</key>
+		<string>227.9</string>
+		<key>Perihelion</key>
+		<string>206.6</string>
+		<key>Aphelion</key>
+		<string>249.2</string>
+		<key>Orbital Period</key>
+		<string>687</string>
+		<key>Orbital Velocity</key>
+		<string>24.1</string>
+		<key>Orbital Inclination</key>
+		<string>1.9</string>
+		<key>Orbital Eccentricity</key>
+		<string>0.094</string>
+		<key>Obliquity to Orbit</key>
+		<string>25.2</string>
+		<key>Mean Temperature</key>
+		<string>-65</string>
+		<key>Surface Pressure</key>
+		<string>0.01</string>
+		<key>Number of Moons</key>
+		<string>2</string>
+		<key>Ring System</key>
+		<false/>
+		<key>Global Magnetic Field</key>
+		<false/>
+	</dict>
+	<key>Item 5</key>
+	<dict>
+		<key>Name</key>
+		<string>Jupiter</string>
+		<key>Mass</key>
+		<string>1898</string>
+		<key>Diameter</key>
+		<string>142984</string>
+		<key>Density</key>
+		<string>1326</string>
+		<key>Gravity</key>
+		<string>23.1</string>
+		<key>Escape Velocity</key>
+		<string>59.5</string>
+		<key>Rotation Period</key>
+		<string>9.9</string>
+		<key>Length of Day</key>
+		<string>9.9</string>
+		<key>Distance from Sun</key>
+		<string>778.6</string>
+		<key>Perihelion</key>
+		<string>740.5</string>
+		<key>Aphelion</key>
+		<string>816.6</string>
+		<key>Orbital Period</key>
+		<string>4331</string>
+		<key>Orbital Velocity</key>
+		<string>13.1</string>
+		<key>Orbital Inclination</key>
+		<string>1.3</string>
+		<key>Orbital Eccentricity</key>
+		<string>0.049</string>
+		<key>Obliquity to Orbit</key>
+		<string>3.1</string>
+		<key>Mean Temperature</key>
+		<string>-110</string>
+		<key>Surface Pressure</key>
+		<string>Unknown</string>
+		<key>Number of Moons</key>
+		<string>67</string>
+		<key>Ring System</key>
+		<true/>
+		<key>Global Magnetic Field</key>
+		<true/>
+	</dict>
+	<key>Item 6</key>
+	<dict>
+		<key>Name</key>
+		<string>Saturn</string>
+		<key>Mass</key>
+		<string>568</string>
+		<key>Diameter</key>
+		<string>120536</string>
+		<key>Density</key>
+		<string>687</string>
+		<key>Gravity</key>
+		<string>9</string>
+		<key>Escape Velocity</key>
+		<string>35.5</string>
+		<key>Rotation Period</key>
+		<string>10.7</string>
+		<key>Length of Day</key>
+		<string>10.7</string>
+		<key>Distance from Sun</key>
+		<string>1433.5</string>
+		<key>Perihelion</key>
+		<string>1352.6</string>
+		<key>Aphelion</key>
+		<string>1514.5</string>
+		<key>Orbital Period</key>
+		<string>10747</string>
+		<key>Orbital Velocity</key>
+		<string>9.7</string>
+		<key>Orbital Inclination</key>
+		<string>2.5</string>
+		<key>Orbital Eccentricity</key>
+		<string>0.057</string>
+		<key>Obliquity to Orbit</key>
+		<string>26.7</string>
+		<key>Mean Temperature</key>
+		<string>-140</string>
+		<key>Surface Pressure</key>
+		<string>Unknown</string>
+		<key>Number of Moons</key>
+		<string>62</string>
+		<key>Ring System</key>
+		<true/>
+		<key>Global Magnetic Field</key>
+		<true/>
+	</dict>
+	<key>Item 7</key>
+	<dict>
+		<key>Name</key>
+		<string>Uranus</string>
+		<key>Mass</key>
+		<string>86.8</string>
+		<key>Diameter</key>
+		<string>51118</string>
+		<key>Density</key>
+		<string>1271</string>
+		<key>Gravity</key>
+		<string>8.7</string>
+		<key>Escape Velocity</key>
+		<string>21.3</string>
+		<key>Rotation Period</key>
+		<string>17.2</string>
+		<key>Length of Day</key>
+		<string>17.2</string>
+		<key>Distance from Sun</key>
+		<string>2872.5</string>
+		<key>Perihelion</key>
+		<string>2741.3</string>
+		<key>Aphelion</key>
+		<string>3003.6</string>
+		<key>Orbital Period</key>
+		<string>30589</string>
+		<key>Orbital Velocity</key>
+		<string>6.8</string>
+		<key>Orbital Inclination</key>
+		<string>0.8</string>
+		<key>Orbital Eccentricity</key>
+		<string>0.046</string>
+		<key>Obliquity to Orbit</key>
+		<string>97.8</string>
+		<key>Mean Temperature</key>
+		<string>-195</string>
+		<key>Surface Pressure</key>
+		<string>Unknown</string>
+		<key>Number of Moons</key>
+		<string>27</string>
+		<key>Ring System</key>
+		<true/>
+		<key>Global Magnetic Field</key>
+		<true/>
+	</dict>
+	<key>Item 8</key>
+	<dict>
+		<key>Name</key>
+		<string>Neptune</string>
+		<key>Mass</key>
+		<string>102</string>
+		<key>Diameter</key>
+		<string>49528</string>
+		<key>Density</key>
+		<string>1638</string>
+		<key>Gravity</key>
+		<string>11</string>
+		<key>Escape Velocity</key>
+		<string>23.5</string>
+		<key>Rotation Period</key>
+		<string>16.1</string>
+		<key>Length of Day</key>
+		<string>16.1</string>
+		<key>Distance from Sun</key>
+		<string>4495.1</string>
+		<key>Perihelion</key>
+		<string>4444.5</string>
+		<key>Aphelion</key>
+		<string>4545.7</string>
+		<key>Orbital Period</key>
+		<string>59800</string>
+		<key>Orbital Velocity</key>
+		<string>5.4</string>
+		<key>Orbital Inclination</key>
+		<string>1.8</string>
+		<key>Orbital Eccentricity</key>
+		<string>0.011</string>
+		<key>Obliquity to Orbit</key>
+		<string>28.3</string>
+		<key>Mean Temperature</key>
+		<string>-200</string>
+		<key>Surface Pressure</key>
+		<string>Unkown</string>
+		<key>Number of Moons</key>
+		<string>14</string>
+		<key>Ring System</key>
+		<true/>
+		<key>Global Magnetic Field</key>
+		<true/>
+	</dict>
+	<key>Item 9</key>
+	<dict>
+		<key>Name</key>
+		<string>Pluto</string>
+		<key>Mass</key>
+		<string>0.0146</string>
+		<key>Diameter</key>
+		<string>2370</string>
+		<key>Density</key>
+		<string>2095</string>
+		<key>Gravity</key>
+		<string>0.7</string>
+		<key>Escape Velocity</key>
+		<string>1.3</string>
+		<key>Rotation Period</key>
+		<string>-153.3</string>
+		<key>Length of Day</key>
+		<string>153.3</string>
+		<key>Distance from Sun</key>
+		<string>5906.4</string>
+		<key>Perihelion</key>
+		<string>4436.8</string>
+		<key>Aphelion</key>
+		<string>7375.9</string>
+		<key>Orbital Period</key>
+		<string>90560</string>
+		<key>Orbital Velocity</key>
+		<string>4.7</string>
+		<key>Orbital Inclination</key>
+		<string>17.2</string>
+		<key>Orbital Eccentricity</key>
+		<string>0.244</string>
+		<key>Obliquity to Orbit</key>
+		<string>122.5</string>
+		<key>Mean Temperature</key>
+		<string>-225</string>
+		<key>Surface Pressure</key>
+		<string>0</string>
+		<key>Number of Moons</key>
+		<string>5</string>
+		<key>Ring System</key>
+		<false/>
+		<key>Global Magnetic Field</key>
+		<false/>
+	</dict>
+</dict>
+</plist>

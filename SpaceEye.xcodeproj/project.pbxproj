@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AA208CC1D4326DD00CB5CFF /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C308280C1D3F7E3F006EDD40 /* GameViewController.m */; };
+		0AA208D21D433BCE00CB5CFF /* PlanetsInfoTabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA208D11D433BCE00CB5CFF /* PlanetsInfoTabelCell.xib */; };
+		0AA208DA1D43428E00CB5CFF /* PlanetsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA208D91D43428E00CB5CFF /* PlanetsTableViewCell.m */; };
+		0AA208DC1D43457800CB5CFF /* SolarSystemData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AA208DB1D43457800CB5CFF /* SolarSystemData.plist */; };
+		0AA208DF1D43478300CB5CFF /* SEPlanet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA208DE1D43478300CB5CFF /* SEPlanet.m */; };
+		0AA208E21D435A3700CB5CFF /* PlanetInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA208E11D435A3700CB5CFF /* PlanetInfoViewController.m */; };
+		C30828051D3F7E3F006EDD40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C30828041D3F7E3F006EDD40 /* main.m */; };
+		C30828081D3F7E3F006EDD40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C30828071D3F7E3F006EDD40 /* AppDelegate.m */; };
+		C308280A1D3F7E3F006EDD40 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C30828091D3F7E3F006EDD40 /* art.scnassets */; };
+		C30828101D3F7E3F006EDD40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C308280E1D3F7E3F006EDD40 /* Main.storyboard */; };
+		C30828121D3F7E3F006EDD40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C30828111D3F7E3F006EDD40 /* Assets.xcassets */; };
+		C30828151D3F7E3F006EDD40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30828131D3F7E3F006EDD40 /* LaunchScreen.storyboard */; };
+		C30828201D3F7E3F006EDD40 /* SpaceEyeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C308281F1D3F7E3F006EDD40 /* SpaceEyeTests.m */; };
+		C308282B1D3F7E3F006EDD40 /* SpaceEyeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C308282A1D3F7E3F006EDD40 /* SpaceEyeUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C308281C1D3F7E3F006EDD40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C30827F81D3F7E3F006EDD40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C30827FF1D3F7E3F006EDD40;
+			remoteInfo = rrrrrrr;
+		};
+		C30828271D3F7E3F006EDD40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C30827F81D3F7E3F006EDD40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C30827FF1D3F7E3F006EDD40;
+			remoteInfo = rrrrrrr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AA208D11D433BCE00CB5CFF /* PlanetsInfoTabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlanetsInfoTabelCell.xib; path = "Planets Info/CustomView/PlanetsInfoTabelCell.xib"; sourceTree = "<group>"; };
+		0AA208D81D43428E00CB5CFF /* PlanetsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlanetsTableViewCell.h; path = "Planets Info/Controller/PlanetsTabelCell/PlanetsTableViewCell.h"; sourceTree = "<group>"; };
+		0AA208D91D43428E00CB5CFF /* PlanetsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlanetsTableViewCell.m; path = "Planets Info/Controller/PlanetsTabelCell/PlanetsTableViewCell.m"; sourceTree = "<group>"; };
+		0AA208DB1D43457800CB5CFF /* SolarSystemData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SolarSystemData.plist; sourceTree = "<group>"; };
+		0AA208DD1D43478300CB5CFF /* SEPlanet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SEPlanet.h; path = "Planets Info/Model/SEPlanet.h"; sourceTree = "<group>"; };
+		0AA208DE1D43478300CB5CFF /* SEPlanet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SEPlanet.m; path = "Planets Info/Model/SEPlanet.m"; sourceTree = "<group>"; };
+		0AA208E01D435A3700CB5CFF /* PlanetInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlanetInfoViewController.h; path = "Planets Info/Controller/PlanetInfoViewController.h"; sourceTree = "<group>"; };
+		0AA208E11D435A3700CB5CFF /* PlanetInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlanetInfoViewController.m; path = "Planets Info/Controller/PlanetInfoViewController.m"; sourceTree = "<group>"; };
+		C30828001D3F7E3F006EDD40 /* SpaceEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C30828041D3F7E3F006EDD40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C30828061D3F7E3F006EDD40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C30828071D3F7E3F006EDD40 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C30828091D3F7E3F006EDD40 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		C308280B1D3F7E3F006EDD40 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		C308280C1D3F7E3F006EDD40 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		C308280F1D3F7E3F006EDD40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C30828111D3F7E3F006EDD40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C30828141D3F7E3F006EDD40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C30828161D3F7E3F006EDD40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C308281B1D3F7E3F006EDD40 /* SpaceEye.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceEye.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C308281F1D3F7E3F006EDD40 /* SpaceEyeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpaceEyeTests.m; sourceTree = "<group>"; };
+		C30828211D3F7E3F006EDD40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C30828261D3F7E3F006EDD40 /* SpaceEye.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceEye.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C308282A1D3F7E3F006EDD40 /* SpaceEyeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpaceEyeUITests.m; sourceTree = "<group>"; };
+		C308282C1D3F7E3F006EDD40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C30827FD1D3F7E3F006EDD40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C30828181D3F7E3F006EDD40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C30828231D3F7E3F006EDD40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AA208CD1D433AD600CB5CFF /* Planets Info */ = {
+			isa = PBXGroup;
+			children = (
+				0AA208D51D433F0700CB5CFF /* Model */,
+				0AA208D41D433EF800CB5CFF /* Controller */,
+				0AA208D31D433EF000CB5CFF /* View */,
+			);
+			name = "Planets Info";
+			sourceTree = "<group>";
+		};
+		0AA208CE1D433AF500CB5CFF /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C308280E1D3F7E3F006EDD40 /* Main.storyboard */,
+				C30828131D3F7E3F006EDD40 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		0AA208D01D433B2E00CB5CFF /* Solar System */ = {
+			isa = PBXGroup;
+			children = (
+				C308280B1D3F7E3F006EDD40 /* GameViewController.h */,
+				C308280C1D3F7E3F006EDD40 /* GameViewController.m */,
+			);
+			name = "Solar System";
+			sourceTree = "<group>";
+		};
+		0AA208D31D433EF000CB5CFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AA208D11D433BCE00CB5CFF /* PlanetsInfoTabelCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0AA208D41D433EF800CB5CFF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0AA208D71D4340DB00CB5CFF /* PlanetsTabelCell */,
+				0AA208E01D435A3700CB5CFF /* PlanetInfoViewController.h */,
+				0AA208E11D435A3700CB5CFF /* PlanetInfoViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0AA208D51D433F0700CB5CFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0AA208DD1D43478300CB5CFF /* SEPlanet.h */,
+				0AA208DE1D43478300CB5CFF /* SEPlanet.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0AA208D71D4340DB00CB5CFF /* PlanetsTabelCell */ = {
+			isa = PBXGroup;
+			children = (
+				0AA208D81D43428E00CB5CFF /* PlanetsTableViewCell.h */,
+				0AA208D91D43428E00CB5CFF /* PlanetsTableViewCell.m */,
+			);
+			name = PlanetsTabelCell;
+			sourceTree = "<group>";
+		};
+		C30827F71D3F7E3F006EDD40 = {
+			isa = PBXGroup;
+			children = (
+				C30828021D3F7E3F006EDD40 /* SpaceEye */,
+				C308281E1D3F7E3F006EDD40 /* SpaceEyeTests */,
+				C30828291D3F7E3F006EDD40 /* SpaceEyeUITests */,
+				C30828011D3F7E3F006EDD40 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C30828011D3F7E3F006EDD40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C30828001D3F7E3F006EDD40 /* SpaceEye.app */,
+				C308281B1D3F7E3F006EDD40 /* SpaceEye.xctest */,
+				C30828261D3F7E3F006EDD40 /* SpaceEye.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C30828021D3F7E3F006EDD40 /* SpaceEye */ = {
+			isa = PBXGroup;
+			children = (
+				0AA208CD1D433AD600CB5CFF /* Planets Info */,
+				0AA208CE1D433AF500CB5CFF /* Storyboard */,
+				C30828091D3F7E3F006EDD40 /* art.scnassets */,
+				0AA208D01D433B2E00CB5CFF /* Solar System */,
+				C30828031D3F7E3F006EDD40 /* Supporting Files */,
+			);
+			path = SpaceEye;
+			sourceTree = "<group>";
+		};
+		C30828031D3F7E3F006EDD40 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AA208DB1D43457800CB5CFF /* SolarSystemData.plist */,
+				C30828161D3F7E3F006EDD40 /* Info.plist */,
+				C30828111D3F7E3F006EDD40 /* Assets.xcassets */,
+				C30828061D3F7E3F006EDD40 /* AppDelegate.h */,
+				C30828071D3F7E3F006EDD40 /* AppDelegate.m */,
+				C30828041D3F7E3F006EDD40 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C308281E1D3F7E3F006EDD40 /* SpaceEyeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C308281F1D3F7E3F006EDD40 /* SpaceEyeTests.m */,
+				C30828211D3F7E3F006EDD40 /* Info.plist */,
+			);
+			path = SpaceEyeTests;
+			sourceTree = "<group>";
+		};
+		C30828291D3F7E3F006EDD40 /* SpaceEyeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C308282A1D3F7E3F006EDD40 /* SpaceEyeUITests.m */,
+				C308282C1D3F7E3F006EDD40 /* Info.plist */,
+			);
+			path = SpaceEyeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C30827FF1D3F7E3F006EDD40 /* SpaceEye */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C308282F1D3F7E3F006EDD40 /* Build configuration list for PBXNativeTarget "SpaceEye" */;
+			buildPhases = (
+				C30827FC1D3F7E3F006EDD40 /* Sources */,
+				C30827FD1D3F7E3F006EDD40 /* Frameworks */,
+				C30827FE1D3F7E3F006EDD40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpaceEye;
+			productName = rrrrrrr;
+			productReference = C30828001D3F7E3F006EDD40 /* SpaceEye.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C308281A1D3F7E3F006EDD40 /* SpaceEyeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C30828321D3F7E3F006EDD40 /* Build configuration list for PBXNativeTarget "SpaceEyeTests" */;
+			buildPhases = (
+				C30828171D3F7E3F006EDD40 /* Sources */,
+				C30828181D3F7E3F006EDD40 /* Frameworks */,
+				C30828191D3F7E3F006EDD40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C308281D1D3F7E3F006EDD40 /* PBXTargetDependency */,
+			);
+			name = SpaceEyeTests;
+			productName = rrrrrrrTests;
+			productReference = C308281B1D3F7E3F006EDD40 /* SpaceEye.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C30828251D3F7E3F006EDD40 /* SpaceEyeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C30828351D3F7E3F006EDD40 /* Build configuration list for PBXNativeTarget "SpaceEyeUITests" */;
+			buildPhases = (
+				C30828221D3F7E3F006EDD40 /* Sources */,
+				C30828231D3F7E3F006EDD40 /* Frameworks */,
+				C30828241D3F7E3F006EDD40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C30828281D3F7E3F006EDD40 /* PBXTargetDependency */,
+			);
+			name = SpaceEyeUITests;
+			productName = rrrrrrrUITests;
+			productReference = C30828261D3F7E3F006EDD40 /* SpaceEye.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C30827F81D3F7E3F006EDD40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = OmarRO;
+				TargetAttributes = {
+					C30827FF1D3F7E3F006EDD40 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = P78RKU833J;
+					};
+					C308281A1D3F7E3F006EDD40 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = C30827FF1D3F7E3F006EDD40;
+					};
+					C30828251D3F7E3F006EDD40 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = C30827FF1D3F7E3F006EDD40;
+					};
+				};
+			};
+			buildConfigurationList = C30827FB1D3F7E3F006EDD40 /* Build configuration list for PBXProject "SpaceEye" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C30827F71D3F7E3F006EDD40;
+			productRefGroup = C30828011D3F7E3F006EDD40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C30827FF1D3F7E3F006EDD40 /* SpaceEye */,
+				C308281A1D3F7E3F006EDD40 /* SpaceEyeTests */,
+				C30828251D3F7E3F006EDD40 /* SpaceEyeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C30827FE1D3F7E3F006EDD40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C308280A1D3F7E3F006EDD40 /* art.scnassets in Resources */,
+				0AA208DC1D43457800CB5CFF /* SolarSystemData.plist in Resources */,
+				C30828151D3F7E3F006EDD40 /* LaunchScreen.storyboard in Resources */,
+				C30828121D3F7E3F006EDD40 /* Assets.xcassets in Resources */,
+				C30828101D3F7E3F006EDD40 /* Main.storyboard in Resources */,
+				0AA208D21D433BCE00CB5CFF /* PlanetsInfoTabelCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C30828191D3F7E3F006EDD40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C30828241D3F7E3F006EDD40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C30827FC1D3F7E3F006EDD40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C30828081D3F7E3F006EDD40 /* AppDelegate.m in Sources */,
+				0AA208CC1D4326DD00CB5CFF /* GameViewController.m in Sources */,
+				0AA208E21D435A3700CB5CFF /* PlanetInfoViewController.m in Sources */,
+				C30828051D3F7E3F006EDD40 /* main.m in Sources */,
+				0AA208DF1D43478300CB5CFF /* SEPlanet.m in Sources */,
+				0AA208DA1D43428E00CB5CFF /* PlanetsTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C30828171D3F7E3F006EDD40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C30828201D3F7E3F006EDD40 /* SpaceEyeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C30828221D3F7E3F006EDD40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C308282B1D3F7E3F006EDD40 /* SpaceEyeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C308281D1D3F7E3F006EDD40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C30827FF1D3F7E3F006EDD40 /* SpaceEye */;
+			targetProxy = C308281C1D3F7E3F006EDD40 /* PBXContainerItemProxy */;
+		};
+		C30828281D3F7E3F006EDD40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C30827FF1D3F7E3F006EDD40 /* SpaceEye */;
+			targetProxy = C30828271D3F7E3F006EDD40 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C308280E1D3F7E3F006EDD40 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C308280F1D3F7E3F006EDD40 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C30828131D3F7E3F006EDD40 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C30828141D3F7E3F006EDD40 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C308282D1D3F7E3F006EDD40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C308282E1D3F7E3F006EDD40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C30828301D3F7E3F006EDD40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "SpaceEye/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Aman.SpaceEye;
+				PRODUCT_NAME = SpaceEye;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		C30828311D3F7E3F006EDD40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "SpaceEye/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Aman.SpaceEye;
+				PRODUCT_NAME = SpaceEye;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		C30828331D3F7E3F006EDD40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = SpaceEyeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Omar.SpaceEyeTests;
+				PRODUCT_NAME = SpaceEye;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceEye.app/SpaceEye";
+			};
+			name = Debug;
+		};
+		C30828341D3F7E3F006EDD40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SpaceEyeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Omar.SpaceEyeTests;
+				PRODUCT_NAME = SpaceEye;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceEye.app/SpaceEye";
+			};
+			name = Release;
+		};
+		C30828361D3F7E3F006EDD40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = SPaceEyeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Omar.SpaceEyeUITests;
+				PRODUCT_NAME = SpaceEye;
+				TEST_TARGET_NAME = rrrrrrr;
+			};
+			name = Debug;
+		};
+		C30828371D3F7E3F006EDD40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SPaceEyeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Omar.SpaceEyeUITests;
+				PRODUCT_NAME = SpaceEye;
+				TEST_TARGET_NAME = rrrrrrr;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C30827FB1D3F7E3F006EDD40 /* Build configuration list for PBXProject "SpaceEye" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C308282D1D3F7E3F006EDD40 /* Debug */,
+				C308282E1D3F7E3F006EDD40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C308282F1D3F7E3F006EDD40 /* Build configuration list for PBXNativeTarget "SpaceEye" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C30828301D3F7E3F006EDD40 /* Debug */,
+				C30828311D3F7E3F006EDD40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C30828321D3F7E3F006EDD40 /* Build configuration list for PBXNativeTarget "SpaceEyeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C30828331D3F7E3F006EDD40 /* Debug */,
+				C30828341D3F7E3F006EDD40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C30828351D3F7E3F006EDD40 /* Build configuration list for PBXNativeTarget "SpaceEyeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C30828361D3F7E3F006EDD40 /* Debug */,
+				C30828371D3F7E3F006EDD40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C30827F81D3F7E3F006EDD40 /* Project object */;
+}
