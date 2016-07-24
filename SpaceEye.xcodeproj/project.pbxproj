@@ -13,6 +13,7 @@
 		0AA208DC1D43457800CB5CFF /* SolarSystemData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AA208DB1D43457800CB5CFF /* SolarSystemData.plist */; };
 		0AA208DF1D43478300CB5CFF /* SEPlanet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA208DE1D43478300CB5CFF /* SEPlanet.m */; };
 		0AA208E21D435A3700CB5CFF /* PlanetInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA208E11D435A3700CB5CFF /* PlanetInfoViewController.m */; };
+		0AEC658D1D456CE7004CCC19 /* DateTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC658C1D456CE7004CCC19 /* DateTimePicker.m */; };
 		C30828051D3F7E3F006EDD40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C30828041D3F7E3F006EDD40 /* main.m */; };
 		C30828081D3F7E3F006EDD40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C30828071D3F7E3F006EDD40 /* AppDelegate.m */; };
 		C308280A1D3F7E3F006EDD40 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C30828091D3F7E3F006EDD40 /* art.scnassets */; };
@@ -49,6 +50,8 @@
 		0AA208DE1D43478300CB5CFF /* SEPlanet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SEPlanet.m; path = "Planets Info/Model/SEPlanet.m"; sourceTree = "<group>"; };
 		0AA208E01D435A3700CB5CFF /* PlanetInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlanetInfoViewController.h; path = "Planets Info/Controller/PlanetInfoViewController.h"; sourceTree = "<group>"; };
 		0AA208E11D435A3700CB5CFF /* PlanetInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlanetInfoViewController.m; path = "Planets Info/Controller/PlanetInfoViewController.m"; sourceTree = "<group>"; };
+		0AEC658B1D456CE7004CCC19 /* DateTimePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTimePicker.h; sourceTree = "<group>"; };
+		0AEC658C1D456CE7004CCC19 /* DateTimePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTimePicker.m; sourceTree = "<group>"; };
 		C30828001D3F7E3F006EDD40 /* SpaceEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C30828041D3F7E3F006EDD40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C30828061D3F7E3F006EDD40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -157,6 +160,15 @@
 			name = PlanetsTabelCell;
 			sourceTree = "<group>";
 		};
+		0AEC658F1D456DCA004CCC19 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				0AEC658B1D456CE7004CCC19 /* DateTimePicker.h */,
+				0AEC658C1D456CE7004CCC19 /* DateTimePicker.m */,
+			);
+			name = DatePicker;
+			sourceTree = "<group>";
+		};
 		C30827F71D3F7E3F006EDD40 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				0AA208CD1D433AD600CB5CFF /* Planets Info */,
+				0AEC658F1D456DCA004CCC19 /* DatePicker */,
 				0AA208CE1D433AF500CB5CFF /* Storyboard */,
 				C30828091D3F7E3F006EDD40 /* art.scnassets */,
 				0AA208D01D433B2E00CB5CFF /* Solar System */,
@@ -354,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEC658D1D456CE7004CCC19 /* DateTimePicker.m in Sources */,
 				C30828081D3F7E3F006EDD40 /* AppDelegate.m in Sources */,
 				0AA208CC1D4326DD00CB5CFF /* GameViewController.m in Sources */,
 				0AA208E21D435A3700CB5CFF /* PlanetInfoViewController.m in Sources */,

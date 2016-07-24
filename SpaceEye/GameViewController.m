@@ -104,7 +104,7 @@
     
     node =  [scene.rootNode childNodeWithName:nodeName recursively:YES];
     [node runAction:[SCNAction repeatActionForever:action]];
-//  [_sun addChildNode:node];
+  [_sun addChildNode:node];
 }
 
 - (void) setInOrbit: (SCNNode*)node Action:(SCNAction *)action{
@@ -150,7 +150,6 @@
             NSLog(@"Hi i'm long press");
         }
     }
-    
         
 }
 
