@@ -29,11 +29,11 @@
         infokey = [dictRoot[key] allKeys];
         values = [dictRoot[key] allValues];
         testing = [NSDictionary dictionaryWithObjects:values forKeys:infokey];
-        NSLog(@"%@ = %@", planetskey,testing);
+       // NSLog(@"%@ = %@", planetskey,testing);
     }
     
     
-    NSLog(@"Item 0: %@",[dictRoot valueForKey:@"Item 0"]);
+  /*  NSLog(@"Item 0: %@",[dictRoot valueForKey:@"Item 0"]);
     NSLog(@"Item 1: %@",[dictRoot valueForKey:@"Item 1"]);
     NSLog(@"Item 2: %@",[dictRoot valueForKey:@"Item 2"]);
     NSLog(@"Item 3: %@",[dictRoot valueForKey:@"Item 3"]);
@@ -42,7 +42,7 @@
     NSLog(@"Item 6: %@",[dictRoot valueForKey:@"Item 6"]);
     NSLog(@"Item 7: %@",[dictRoot valueForKey:@"Item 7"]);
     NSLog(@"Item 8: %@",[dictRoot valueForKey:@"Item 8"]);
-    NSLog(@"Item 9: %@",[dictRoot valueForKey:@"Item 9"]);
+    NSLog(@"Item 9: %@",[dictRoot valueForKey:@"Item 9"]);*/
   
 }
 @end

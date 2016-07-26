@@ -29,9 +29,11 @@
 
 @property (nonatomic, strong)NSArray *x;
 @property (nonatomic, strong)NSArray *y;
+@property (nonatomic, strong)NSArray *z;
 @property (nonatomic, strong)NSArray *PlanetName;
 @property (nonatomic, strong)NSDictionary *XPosition;
 @property (nonatomic, strong)NSDictionary *YPosition;
+@property (nonatomic, strong)NSDictionary *ZPosition;
 @property  BOOL flag;
 @property DateTimePicker *picker;
 
@@ -335,19 +337,45 @@
         P[i] = a[i] * cosf(E[i] - e[i]);
         Q[i] = a[i] * sinf(E[i]) * sqrtf(1 - powf(e[i], 2.0));
     }
+    //rotating 2d coordinates into full 3d coordinate system:
+    float x[9];
+    float y[9];
+    float z[9];
+    
+    for (int i = 0; i<9; i++)
+    {
+        //rotating by argument of priapsis
+        x[i] = cosf(w[i]) * P[i] - sinf(w[i]) * Q[i];
+        y[i] = sinf(w[i]) * P[i] + cosf(w[i]) * Q[i];
+        
+        //rotating by inclination
+        z[i] = sinf(In[i]) * x[i];
+        x[i] = cosf(In[i]) * x[i];
+        
+        //rotate by longitude of ascending node
+        float tempx[9];
+        tempx[i] = x[i];
+        x[i] = cosf(Longn[i]) * tempx[i] - sinf(Longn[i]) * y[i];
+        y[i] = sinf(Longn[i]) * tempx[i] + cosf(Longn[i]) * y[i];
+        
+    }
     
     
     self.PlanetName = [NSArray arrayWithObjects: @"mercurry", @"venus", @"earth", @"mars", @"jupiter", @"saturn", @"uranus", @"neptune", @"pluto", nil];
     
     
-    self.x = [NSArray arrayWithObjects:[NSNumber numberWithFloat:P[0]],[NSNumber numberWithFloat:P[1]],[NSNumber numberWithFloat:P[2]],[NSNumber numberWithFloat:P[3]],[NSNumber numberWithFloat:P[4]],[NSNumber numberWithFloat:P[5]],[NSNumber numberWithFloat:P[6]],[NSNumber numberWithFloat:P[7]],[NSNumber numberWithFloat:P[8]], nil];
+    self.x = [NSArray arrayWithObjects:[NSNumber numberWithFloat:x[0]],[NSNumber numberWithFloat:x[1]],[NSNumber numberWithFloat:x[2]],[NSNumber numberWithFloat:x[3]],[NSNumber numberWithFloat:x[4]],[NSNumber numberWithFloat:x[5]],[NSNumber numberWithFloat:x[6]],[NSNumber numberWithFloat:x[7]],[NSNumber numberWithFloat:x[8]], nil];
     
-    self.y = [NSArray arrayWithObjects:[NSNumber numberWithFloat:Q[0]],[NSNumber numberWithFloat:Q[1]],[NSNumber numberWithFloat:Q[2]],[NSNumber numberWithFloat:Q[3]],[NSNumber numberWithFloat:Q[4]],[NSNumber numberWithFloat:Q[5]],[NSNumber numberWithFloat:Q[6]],[NSNumber numberWithFloat:Q[7]],[NSNumber numberWithFloat:Q[8]], nil];
+    self.y = [NSArray arrayWithObjects:[NSNumber numberWithFloat:y[0]],[NSNumber numberWithFloat:y[1]],[NSNumber numberWithFloat:y[2]],[NSNumber numberWithFloat:y[3]],[NSNumber numberWithFloat:y[4]],[NSNumber numberWithFloat:y[5]],[NSNumber numberWithFloat:y[6]],[NSNumber numberWithFloat:y[7]],[NSNumber numberWithFloat:y[8]], nil];
+     self.z = [NSArray arrayWithObjects:[NSNumber numberWithFloat:z[0]],[NSNumber numberWithFloat:z[1]],[NSNumber numberWithFloat:z[2]],[NSNumber numberWithFloat:z[3]],[NSNumber numberWithFloat:z[4]],[NSNumber numberWithFloat:z[5]],[NSNumber numberWithFloat:z[6]],[NSNumber numberWithFloat:z[7]],[NSNumber numberWithFloat:z[8]], nil];
     
     self.XPosition = [NSDictionary dictionaryWithObjects:self.x forKeys:self.PlanetName];
     self.YPosition = [NSDictionary dictionaryWithObjects:self.y forKeys:self.PlanetName];
+    self.ZPosition = [NSDictionary dictionaryWithObjects:self.z forKeys:self.PlanetName];
     NSLog(@"XPosition: %@", self.XPosition);
     NSLog(@"YPosition: %@", self.YPosition);
+    NSLog(@"YPosition: %@", self.ZPosition);
+
     
 }
 
