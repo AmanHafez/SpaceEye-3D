@@ -43,13 +43,11 @@
 @implementation GameViewController
 
 
-- (void)viewDidLoad
+-(void)viewDidLoad
 {
     [super viewDidLoad];
-     _flag = YES;
+    _flag = YES;
     [self setup];
-
-    
 }
 
 
