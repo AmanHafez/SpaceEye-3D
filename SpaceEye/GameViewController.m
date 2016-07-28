@@ -27,6 +27,7 @@
 @property SCNView *scnView;
 @property SCNNode *cameraNode;
 
+@property(nonatomic, getter=isPaused) BOOL paused;
 @property (nonatomic, strong)NSArray *x;
 @property (nonatomic, strong)NSArray *y;
 @property (nonatomic, strong)NSArray *z;
@@ -42,6 +43,9 @@
 
 @implementation GameViewController
 
+float x[9];
+float y[9];
+float z[9];
 
 - (void)viewDidLoad
 {
@@ -165,6 +169,8 @@
             _picker.hidden = NO;
             [_picker setMode:UIDatePickerModeDate];
             [_picker.picker addTarget:self action:@selector(datePickerDateChanged:) forControlEvents:UIControlEventValueChanged];
+            
+            self.scene.paused = YES;
             _flag = NO;
             
         }
@@ -337,10 +343,7 @@
         P[i] = a[i] * cosf(E[i] - e[i]);
         Q[i] = a[i] * sinf(E[i]) * sqrtf(1 - powf(e[i], 2.0));
     }
-    //rotating 2d coordinates into full 3d coordinate system:
-    float x[9];
-    float y[9];
-    float z[9];
+    //rotating 2d coordinates into full 3d coordinate system
     
     for (int i = 0; i<9; i++)
     {
@@ -359,44 +362,39 @@
         y[i] = sinf(Longn[i]) * tempx[i] + cosf(Longn[i]) * y[i];
         
     }
-    
-    
-    self.PlanetName = [NSArray arrayWithObjects: @"mercurry", @"venus", @"earth", @"mars", @"jupiter", @"saturn", @"uranus", @"neptune", @"pluto", nil];
-    
-    
+        
     self.x = [NSArray arrayWithObjects:[NSNumber numberWithFloat:x[0]],[NSNumber numberWithFloat:x[1]],[NSNumber numberWithFloat:x[2]],[NSNumber numberWithFloat:x[3]],[NSNumber numberWithFloat:x[4]],[NSNumber numberWithFloat:x[5]],[NSNumber numberWithFloat:x[6]],[NSNumber numberWithFloat:x[7]],[NSNumber numberWithFloat:x[8]], nil];
     
     self.y = [NSArray arrayWithObjects:[NSNumber numberWithFloat:y[0]],[NSNumber numberWithFloat:y[1]],[NSNumber numberWithFloat:y[2]],[NSNumber numberWithFloat:y[3]],[NSNumber numberWithFloat:y[4]],[NSNumber numberWithFloat:y[5]],[NSNumber numberWithFloat:y[6]],[NSNumber numberWithFloat:y[7]],[NSNumber numberWithFloat:y[8]], nil];
      self.z = [NSArray arrayWithObjects:[NSNumber numberWithFloat:z[0]],[NSNumber numberWithFloat:z[1]],[NSNumber numberWithFloat:z[2]],[NSNumber numberWithFloat:z[3]],[NSNumber numberWithFloat:z[4]],[NSNumber numberWithFloat:z[5]],[NSNumber numberWithFloat:z[6]],[NSNumber numberWithFloat:z[7]],[NSNumber numberWithFloat:z[8]], nil];
     
-    self.XPosition = [NSDictionary dictionaryWithObjects:self.x forKeys:self.PlanetName];
-    self.YPosition = [NSDictionary dictionaryWithObjects:self.y forKeys:self.PlanetName];
-    self.ZPosition = [NSDictionary dictionaryWithObjects:self.z forKeys:self.PlanetName];
-    NSLog(@"XPosition: %@", self.XPosition);
-    NSLog(@"YPosition: %@", self.YPosition);
-    NSLog(@"YPosition: %@", self.ZPosition);
 
-    
+    //self.scene.paused = NO;
+
 }
 
 -(void)donePressed{
     _picker.hidden = YES;
+   
+    [self setInOrbit:_mercury Action:[SCNAction moveTo:SCNVector3Make(x[0], y[0], z[0]) duration:1]];
+    [self setInOrbit:_venus Action:[SCNAction moveTo:SCNVector3Make(x[1], y[1], z[1]) duration:1]];
+    [self setInOrbit:_earth Action:[SCNAction moveTo:SCNVector3Make(x[2], y[2], z[2]) duration:1]];
+    [self setInOrbit:_mars Action:[SCNAction moveTo:SCNVector3Make(x[3], y[3], z[3]) duration:1]];
+    [self setInOrbit:_jupiter Action:[SCNAction moveTo:SCNVector3Make(x[4], y[4], z[4]) duration:1]];
+    [self setInOrbit:_saturn Action:[SCNAction moveTo:SCNVector3Make(x[5], y[5], z[5]) duration:1]];
+    [self setInOrbit:_uranus Action:[SCNAction moveTo:SCNVector3Make(x[6], y[6], z[6]) duration:1]];
+    [self setInOrbit:_neptune Action:[SCNAction moveTo:SCNVector3Make(x[7], y[7], z[7]) duration:1]];
+    [self setInOrbit:_pluto Action:[SCNAction moveTo:SCNVector3Make(x[8], y[8], z[8]) duration:1]];
+    
+    self.scene.paused = NO;
     _flag = YES;
 
-    /* for(id i in self.PlanetName)
-     {
-     if(i == planet)
-     {
-     //planet.centerXAnchor = self;
-     }
-     }
-     
-     // planet.layer.anchorPoint(self.XPosition, self.YPosition);*/
     
 }
 
 -(void)cancelPressed {
     _picker.hidden = YES;
+    self.scene.paused = NO;
     _flag = YES;
 
 }
