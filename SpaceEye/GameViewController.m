@@ -47,13 +47,11 @@ float x[9];
 float y[9];
 float z[9];
 
-- (void)viewDidLoad
+-(void)viewDidLoad
 {
     [super viewDidLoad];
-     _flag = YES;
+    _flag = YES;
     [self setup];
-
-    
 }
 
 
