@@ -61,21 +61,20 @@
                         <connections>
                             <outlet property="dataSource" destination="JVb-ly-2w2" id="fJP-oc-6c6"/>
                             <outlet property="delegate" destination="JVb-ly-2w2" id="nbR-Kg-Eda"/>
-                            <outletCollection property="gestureRecognizers" destination="PLB-31-edh" appends="YES" id="IAa-jv-f7q"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Planet Informations" id="haG-1d-efH"/>
+                    <navigationItem key="navigationItem" title="Planet Informations" id="haG-1d-efH">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="2De-z9-sOY">
+                            <connections>
+                                <action selector="swapBack:" destination="JVb-ly-2w2" id="5OP-ep-zXw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="view" destination="K2L-fh-ae8" id="G93-kK-Wa8"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jw5-5K-spI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="PLB-31-edh">
-                    <rectEdge key="edges" left="YES"/>
-                    <connections>
-                        <action selector="swapBack:" destination="JVb-ly-2w2" id="3Uc-wc-N6e"/>
-                    </connections>
-                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="985" y="-54"/>
         </scene>

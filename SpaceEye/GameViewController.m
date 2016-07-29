@@ -13,28 +13,28 @@
 @interface GameViewController()
 
 
-@property SCNNode *sun;
-@property SCNNode *mercury;
-@property SCNNode *venus;
-@property SCNNode *earth;
-@property SCNNode *mars;
-@property SCNNode *jupiter;
-@property SCNNode *saturn;
-@property SCNNode *uranus;
-@property SCNNode *neptune;
-@property SCNNode *pluto;
-@property SCNScene *scene;
-@property SCNView *scnView;
-@property SCNNode *cameraNode;
+@property (nonatomic, strong) SCNNode *sun;
+@property (nonatomic, strong) SCNNode *mercury;
+@property (nonatomic, strong) SCNNode *venus;
+@property (nonatomic, strong) SCNNode *earth;
+@property (nonatomic, strong) SCNNode *mars;
+@property (nonatomic, strong) SCNNode *jupiter;
+@property (nonatomic, strong) SCNNode *saturn;
+@property (nonatomic, strong) SCNNode *uranus;
+@property (nonatomic, strong) SCNNode *neptune;
+@property (nonatomic, strong) SCNNode *pluto;
+@property (nonatomic, strong) SCNScene *scene;
+@property (nonatomic, strong) SCNView *scnView;
+@property (nonatomic, strong) SCNNode *cameraNode;
 
-@property(nonatomic, getter=isPaused) BOOL paused;
-@property (nonatomic, strong)NSArray *x;
-@property (nonatomic, strong)NSArray *y;
-@property (nonatomic, strong)NSArray *z;
-@property (nonatomic, strong)NSArray *PlanetName;
-@property (nonatomic, strong)NSDictionary *XPosition;
-@property (nonatomic, strong)NSDictionary *YPosition;
-@property (nonatomic, strong)NSDictionary *ZPosition;
+@property (nonatomic, getter=isPaused) BOOL paused;
+@property (nonatomic, strong) NSArray *x;
+@property (nonatomic, strong) NSArray *y;
+@property (nonatomic, strong) NSArray *z;
+@property (nonatomic, strong) NSArray *PlanetName;
+@property (nonatomic, strong) NSDictionary *XPosition;
+@property (nonatomic, strong) NSDictionary *YPosition;
+@property (nonatomic, strong) NSDictionary *ZPosition;
 @property  BOOL flag;
 @property DateTimePicker *picker;
 
@@ -54,6 +54,7 @@ float z[9];
     [self setup];
 }
 
+#pragma mark - setupView
 
 - (void)setup {
     // create a new scene
@@ -71,16 +72,12 @@ float z[9];
     [self setupSceneElements:self.scene Node:_uranus NodeName:@"Uranus" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
     [self setupSceneElements:self.scene Node:_neptune NodeName:@"Neptune" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
     [self setupSceneElements:self.scene Node:_pluto NodeName:@"Pluto" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
-    
-    
-    [self setInOrbit:_jupiter Action:[SCNAction moveTo:SCNVector3Make(20, 10, 0) duration:1]];
-    
+
     //     create and add a camera to the scene
     _cameraNode = [SCNNode node];
     _cameraNode.camera = [SCNCamera camera];
     _cameraNode.camera.automaticallyAdjustsZRange = YES;
     [_scene.rootNode addChildNode:_cameraNode];
-    
     
     // allows the user to manipulate the camera
     self.scnView.allowsCameraControl = YES;
@@ -101,7 +98,6 @@ float z[9];
     NSMutableArray *gestureRecognizers = [NSMutableArray array];
     [gestureRecognizers addObject:tapGesture];
     [gestureRecognizers addObjectsFromArray: self.scnView.gestureRecognizers];
-    
     self.scnView.gestureRecognizers = gestureRecognizers;
     
     
@@ -114,7 +110,6 @@ float z[9];
 
 
 - (void)setupSceneElements : (SCNScene*)scene Node:(SCNNode*)node NodeName:(NSString*)nodeName Action:(SCNAction *)action{
-    
     node =  [scene.rootNode childNodeWithName:nodeName recursively:YES];
     [node runAction:[SCNAction repeatActionForever:action]];
     [_sun addChildNode:node];
@@ -125,6 +120,8 @@ float z[9];
 }
 
 
+
+#pragma mark - handel gestures
 
 - (void) handleTap:(UIGestureRecognizer*)gestureRecognize
 {
@@ -189,6 +186,7 @@ float z[9];
 }
 
 
+#pragma mark- DatePicker
 
 -(void) datePickerDateChanged:(id)sender
 {
@@ -374,15 +372,20 @@ float z[9];
 -(void)donePressed{
     _picker.hidden = YES;
     
-    [self setInOrbit:_mercury Action:[SCNAction moveTo:SCNVector3Make(x[0], y[0], z[0]) duration:1]];
-    [self setInOrbit:_venus Action:[SCNAction moveTo:SCNVector3Make(x[1], y[1], z[1]) duration:1]];
-    [self setInOrbit:_earth Action:[SCNAction moveTo:SCNVector3Make(x[2], y[2], z[2]) duration:1]];
-    [self setInOrbit:_mars Action:[SCNAction moveTo:SCNVector3Make(x[3], y[3], z[3]) duration:1]];
-    [self setInOrbit:_jupiter Action:[SCNAction moveTo:SCNVector3Make(x[4], y[4], z[4]) duration:1]];
-    [self setInOrbit:_saturn Action:[SCNAction moveTo:SCNVector3Make(x[5], y[5], z[5]) duration:1]];
-    [self setInOrbit:_uranus Action:[SCNAction moveTo:SCNVector3Make(x[6], y[6], z[6]) duration:1]];
-    [self setInOrbit:_neptune Action:[SCNAction moveTo:SCNVector3Make(x[7], y[7], z[7]) duration:1]];
-    [self setInOrbit:_pluto Action:[SCNAction moveTo:SCNVector3Make(x[8], y[8], z[8]) duration:1]];
+    [self setInOrbit:_mercury Action:[SCNAction moveBy:SCNVector3Make(x[0], y[0], z[0]) duration:1]];
+    [self setInOrbit:_venus Action:[SCNAction moveBy:SCNVector3Make(x[1], y[1], z[1]) duration:1]];
+    
+    
+    [self setInOrbit:_earth Action:[SCNAction moveBy:SCNVector3Make(x[2], y[2], z[2]) duration:1]];
+    [self setInOrbit:_mars Action:[SCNAction moveBy:SCNVector3Make(x[3], y[3], z[3]) duration:1]];
+    [self setInOrbit:_jupiter Action:[SCNAction moveBy:SCNVector3Make(x[4], y[4], z[4]) duration:1]];
+
+
+    
+    [self setInOrbit:_saturn Action:[SCNAction moveBy:SCNVector3Make(x[5], y[5], z[5]) duration:1]];
+    [self setInOrbit:_uranus Action:[SCNAction moveBy:SCNVector3Make(x[6], y[6], z[6]) duration:1]];
+    [self setInOrbit:_neptune Action:[SCNAction moveBy:SCNVector3Make(x[7], y[7], z[7]) duration:1]];
+    [self setInOrbit:_pluto Action:[SCNAction moveBy:SCNVector3Make(x[8], y[8], z[8]) duration:1]];
     
     self.scene.paused = NO;
     _flag = YES;

@@ -4,8 +4,6 @@
 <dict>
 	<key>Mercury</key>
 	<dict>
-		<key>Name</key>
-		<string>Mercury</string>
 		<key>Mass</key>
 		<string>0.33</string>
 		<key>Diameter</key>
@@ -49,8 +47,6 @@
 	</dict>
 	<key>Venus</key>
 	<dict>
-		<key>Name</key>
-		<string>Venus</string>
 		<key>Mass</key>
 		<string>4.87</string>
 		<key>Diameter</key>
@@ -94,8 +90,6 @@
 	</dict>
 	<key>Earth</key>
 	<dict>
-		<key>Name</key>
-		<string>Earth</string>
 		<key>Mass</key>
 		<string>5.97</string>
 		<key>Diameter</key>
@@ -139,8 +133,6 @@
 	</dict>
 	<key>Mars</key>
 	<dict>
-		<key>Name</key>
-		<string>Mars</string>
 		<key>Mass</key>
 		<string>0.642</string>
 		<key>Diameter</key>
@@ -184,8 +176,6 @@
 	</dict>
 	<key>Jupiter</key>
 	<dict>
-		<key>Name</key>
-		<string>Jupiter</string>
 		<key>Mass</key>
 		<string>1898</string>
 		<key>Diameter</key>
@@ -229,8 +219,6 @@
 	</dict>
 	<key>Saturn</key>
 	<dict>
-		<key>Name</key>
-		<string>Saturn</string>
 		<key>Mass</key>
 		<string>568</string>
 		<key>Diameter</key>
@@ -274,8 +262,6 @@
 	</dict>
 	<key>Uranus</key>
 	<dict>
-		<key>Name</key>
-		<string>Uranus</string>
 		<key>Mass</key>
 		<string>86.8</string>
 		<key>Diameter</key>
@@ -319,8 +305,6 @@
 	</dict>
 	<key>Neptune</key>
 	<dict>
-		<key>Name</key>
-		<string>Neptune</string>
 		<key>Mass</key>
 		<string>102</string>
 		<key>Diameter</key>
@@ -364,8 +348,6 @@
 	</dict>
 	<key>Pluto</key>
 	<dict>
-		<key>Name</key>
-		<string>Pluto</string>
 		<key>Mass</key>
 		<string>0.0146</string>
 		<key>Diameter</key>

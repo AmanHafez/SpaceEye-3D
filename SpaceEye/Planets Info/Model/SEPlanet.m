@@ -21,11 +21,11 @@
 
 
 + (NSDictionary *) getPlanetInfo:(NSString *)planetName {
-        NSDictionary *dictRoot = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SolarSystemData" ofType:@"plist"]];
+    NSDictionary *dictRoot = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SolarSystemData" ofType:@"plist"]];
     NSDictionary *planet = [dictRoot objectForKey:planetName];
     return planet;
 }
 
-  
+
 
 @end
