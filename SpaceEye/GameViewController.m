@@ -63,15 +63,39 @@ float z[9];
     self.sun = [self.scene.rootNode childNodeWithName:@"Sun" recursively:YES];
     [self.sun runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:2 z:0 duration:5]]];
     
-    [self setupSceneElements:self.scene Node:_mercury NodeName:@"Mercury" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
-    [self setupSceneElements:self.scene Node:_venus NodeName:@"Venus" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
-    [self setupSceneElements:self.scene Node:_earth NodeName:@"Earth" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
-    [self setupSceneElements:self.scene Node:_mars NodeName:@"Mars" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
-    [self setupSceneElements:self.scene Node:_jupiter NodeName:@"Jupiter" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
-    [self setupSceneElements:self.scene Node:_saturn NodeName:@"Saturn" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
-    [self setupSceneElements:self.scene Node:_uranus NodeName:@"Uranus" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
-    [self setupSceneElements:self.scene Node:_neptune NodeName:@"Neptune" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
-    [self setupSceneElements:self.scene Node:_pluto NodeName:@"Pluto" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
+    self.mercury = [self.scene.rootNode childNodeWithName:@"Mercury" recursively:YES];
+    [self.mercury runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
+    
+    self.venus = [self.scene.rootNode childNodeWithName:@"Venus" recursively:YES];
+    [self.venus runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
+    
+
+    self.earth = [self.scene.rootNode childNodeWithName:@"Earth" recursively:YES];
+    [self.earth runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
+    
+    self.mars = [self.scene.rootNode childNodeWithName:@"Mars" recursively:YES];
+    [self.mars runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
+    
+    self.mercury = [self.scene.rootNode childNodeWithName:@"Mercury" recursively:YES];
+    [self.mercury runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
+    
+    self.jupiter = [self.scene.rootNode childNodeWithName:@"Jupiter" recursively:YES];
+    [self.jupiter runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
+    
+    
+    self.saturn = [self.scene.rootNode childNodeWithName:@"Saturn" recursively:YES];
+    [self.saturn runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
+    
+    self.uranus = [self.scene.rootNode childNodeWithName:@"Uranus" recursively:YES];
+    [self.uranus runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
+    
+    self.neptune = [self.scene.rootNode childNodeWithName:@"Neptune" recursively:YES];
+    [self.neptune runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
+    
+    self.pluto = [self.scene.rootNode childNodeWithName:@"Pluto" recursively:YES];
+    [self.pluto runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
+
+    
 
     //     create and add a camera to the scene
     _cameraNode = [SCNNode node];
@@ -109,15 +133,7 @@ float z[9];
 }
 
 
-- (void)setupSceneElements : (SCNScene*)scene Node:(SCNNode*)node NodeName:(NSString*)nodeName Action:(SCNAction *)action{
-    node =  [scene.rootNode childNodeWithName:nodeName recursively:YES];
-    [node runAction:[SCNAction repeatActionForever:action]];
-//    [_sun addChildNode:node];
-}
 
-- (void) setInOrbit: (SCNNode*)node Action:(SCNAction *)action{
-    [node runAction:[SCNAction repeatActionForever:action]];
-}
 
 
 
@@ -172,8 +188,6 @@ float z[9];
     }
     
 }
-
-
 
 
 - (BOOL)shouldAutorotate
@@ -369,19 +383,23 @@ float z[9];
     
 }
 
+
+
 -(void)donePressed{
     _picker.hidden = YES;
     
-    [self setInOrbit:_mercury Action:[SCNAction moveBy:SCNVector3Make(x[0], y[0], z[0]) duration:1]];
-    [self setInOrbit:_venus Action:[SCNAction moveBy:SCNVector3Make(x[1], y[1], z[1]) duration:1]];
-    [self setInOrbit:_earth Action:[SCNAction moveBy:SCNVector3Make(x[2], y[2], z[2]) duration:1]];
-    [self setInOrbit:_mars Action:[SCNAction moveBy:SCNVector3Make(x[3], y[3], z[3]) duration:1]];
-    [self setInOrbit:_jupiter Action:[SCNAction moveBy:SCNVector3Make(x[4], y[4], z[4]) duration:1]];
-    [self setInOrbit:_saturn Action:[SCNAction moveBy:SCNVector3Make(x[5], y[5], z[5]) duration:1]];
-    [self setInOrbit:_uranus Action:[SCNAction moveBy:SCNVector3Make(x[6], y[6], z[6]) duration:1]];
-    [self setInOrbit:_neptune Action:[SCNAction moveBy:SCNVector3Make(x[7], y[7], z[7]) duration:1]];
-    [self setInOrbit:_pluto Action:[SCNAction moveBy:SCNVector3Make(x[8], y[8], z[8]) duration:1]];
     
+    [self.mercury runAction:[SCNAction moveBy:SCNVector3Make(x[0], y[0], z[0]) duration:1]];
+    
+    [self.venus runAction:[SCNAction moveBy:SCNVector3Make(x[1], y[1], z[1]) duration:1]];
+    [self.earth runAction:[SCNAction moveBy:SCNVector3Make(x[2], y[2], z[2]) duration:1]];
+    [self.mars runAction:[SCNAction moveBy:SCNVector3Make(x[3], y[3], z[3]) duration:1]];
+    [self.jupiter runAction:[SCNAction moveBy:SCNVector3Make(x[4], y[4], z[4]) duration:1]];
+    [self.saturn runAction:[SCNAction moveBy:SCNVector3Make(x[5], y[5], z[5]) duration:1]];
+    [self.uranus runAction:[SCNAction moveBy:SCNVector3Make(x[6], y[6], z[6]) duration:1]];
+    [self.neptune runAction:[SCNAction moveBy:SCNVector3Make(x[7], y[7], z[7]) duration:1]];
+    [self.pluto runAction:[SCNAction moveBy:SCNVector3Make(x[8], y[8], z[8]) duration:1]];
+
     self.scene.paused = NO;
     _flag = YES;
     
