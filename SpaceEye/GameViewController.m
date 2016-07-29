@@ -96,15 +96,16 @@ float z[9];
     [self.pluto runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:-2 z:0 duration:1]]];
 
     
-
+    
+    
+    
+    self.scnView.allowsCameraControl = YES;
     //     create and add a camera to the scene
     _cameraNode = [SCNNode node];
     _cameraNode.camera = [SCNCamera camera];
     _cameraNode.camera.automaticallyAdjustsZRange = YES;
-    [_scene.rootNode addChildNode:_cameraNode];
     
-    // allows the user to manipulate the camera
-    self.scnView.allowsCameraControl = YES;
+    [_scene.rootNode addChildNode:_cameraNode];
     
     
     // retrieve the SCNView
@@ -388,9 +389,7 @@ float z[9];
 -(void)donePressed{
     _picker.hidden = YES;
     
-    
     [self.mercury runAction:[SCNAction moveBy:SCNVector3Make(x[0], y[0], z[0]) duration:1]];
-    
     [self.venus runAction:[SCNAction moveBy:SCNVector3Make(x[1], y[1], z[1]) duration:1]];
     [self.earth runAction:[SCNAction moveBy:SCNVector3Make(x[2], y[2], z[2]) duration:1]];
     [self.mars runAction:[SCNAction moveBy:SCNVector3Make(x[3], y[3], z[3]) duration:1]];
@@ -400,6 +399,20 @@ float z[9];
     [self.neptune runAction:[SCNAction moveBy:SCNVector3Make(x[7], y[7], z[7]) duration:1]];
     [self.pluto runAction:[SCNAction moveBy:SCNVector3Make(x[8], y[8], z[8]) duration:1]];
 
+    
+    [self.sun addChildNode:self.mercury];
+    [self.sun addChildNode:self.venus];
+    [self.sun addChildNode:self.earth];
+    [self.sun addChildNode:self.mars];
+    [self.sun addChildNode:self.jupiter];
+    [self.sun addChildNode:self.saturn];
+    [self.sun addChildNode:self.uranus];
+    [self.sun addChildNode:self.neptune];
+    [self.sun addChildNode:self.pluto];
+
+
+    
+    
     self.scene.paused = NO;
     _flag = YES;
     
