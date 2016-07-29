@@ -71,7 +71,7 @@ float z[9];
     [self setupSceneElements:self.scene Node:_uranus NodeName:@"Uranus" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
     [self setupSceneElements:self.scene Node:_neptune NodeName:@"Neptune" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
     [self setupSceneElements:self.scene Node:_pluto NodeName:@"Pluto" Action:[SCNAction rotateByX:0 y:-2 z:0 duration:1]];
-  
+    
     
     [self setInOrbit:_jupiter Action:[SCNAction moveTo:SCNVector3Make(20, 10, 0) duration:1]];
     
@@ -84,7 +84,7 @@ float z[9];
     
     // allows the user to manipulate the camera
     self.scnView.allowsCameraControl = YES;
-
+    
     
     // retrieve the SCNView
     self.scnView = (SCNView *)self.view;
@@ -103,7 +103,7 @@ float z[9];
     [gestureRecognizers addObjectsFromArray: self.scnView.gestureRecognizers];
     
     self.scnView.gestureRecognizers = gestureRecognizers;
- 
+    
     
     UILongPressGestureRecognizer *longPressGestureRecognizer=[[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPressRecognizer:)];
     longPressGestureRecognizer.numberOfTouchesRequired=1;
@@ -117,11 +117,11 @@ float z[9];
     
     node =  [scene.rootNode childNodeWithName:nodeName recursively:YES];
     [node runAction:[SCNAction repeatActionForever:action]];
-  [_sun addChildNode:node];
+    [_sun addChildNode:node];
 }
 
 - (void) setInOrbit: (SCNNode*)node Action:(SCNAction *)action{
-      [node runAction:[SCNAction repeatActionForever:action]];
+    [node runAction:[SCNAction repeatActionForever:action]];
 }
 
 
@@ -138,11 +138,11 @@ float z[9];
     // check that we clicked on at least one object
     if([hitResults count] > 0){
         if( [[[[hitResults firstObject]node]name]isEqualToString:@"Sun"]){
-            PlanetInfoViewController *planetInfo = [self.storyboard instantiateViewControllerWithIdentifier:@"PlanetInfoViewController"];
+            PlanetInfoViewController *planetInfo = [self.storyboard instantiateViewControllerWithIdentifier:@"PlanetsInfoNavigationController"];
             [self presentViewController:planetInfo animated:YES completion:nil];
         }
     }
-
+    
     
 }
 
@@ -173,8 +173,8 @@ float z[9];
             
         }
     }
-
-    }
+    
+}
 
 
 
@@ -360,20 +360,20 @@ float z[9];
         y[i] = sinf(Longn[i]) * tempx[i] + cosf(Longn[i]) * y[i];
         
     }
-        
+    
     self.x = [NSArray arrayWithObjects:[NSNumber numberWithFloat:x[0]],[NSNumber numberWithFloat:x[1]],[NSNumber numberWithFloat:x[2]],[NSNumber numberWithFloat:x[3]],[NSNumber numberWithFloat:x[4]],[NSNumber numberWithFloat:x[5]],[NSNumber numberWithFloat:x[6]],[NSNumber numberWithFloat:x[7]],[NSNumber numberWithFloat:x[8]], nil];
     
     self.y = [NSArray arrayWithObjects:[NSNumber numberWithFloat:y[0]],[NSNumber numberWithFloat:y[1]],[NSNumber numberWithFloat:y[2]],[NSNumber numberWithFloat:y[3]],[NSNumber numberWithFloat:y[4]],[NSNumber numberWithFloat:y[5]],[NSNumber numberWithFloat:y[6]],[NSNumber numberWithFloat:y[7]],[NSNumber numberWithFloat:y[8]], nil];
-     self.z = [NSArray arrayWithObjects:[NSNumber numberWithFloat:z[0]],[NSNumber numberWithFloat:z[1]],[NSNumber numberWithFloat:z[2]],[NSNumber numberWithFloat:z[3]],[NSNumber numberWithFloat:z[4]],[NSNumber numberWithFloat:z[5]],[NSNumber numberWithFloat:z[6]],[NSNumber numberWithFloat:z[7]],[NSNumber numberWithFloat:z[8]], nil];
+    self.z = [NSArray arrayWithObjects:[NSNumber numberWithFloat:z[0]],[NSNumber numberWithFloat:z[1]],[NSNumber numberWithFloat:z[2]],[NSNumber numberWithFloat:z[3]],[NSNumber numberWithFloat:z[4]],[NSNumber numberWithFloat:z[5]],[NSNumber numberWithFloat:z[6]],[NSNumber numberWithFloat:z[7]],[NSNumber numberWithFloat:z[8]], nil];
     
-
+    
     //self.scene.paused = NO;
-
+    
 }
 
 -(void)donePressed{
     _picker.hidden = YES;
-   
+    
     [self setInOrbit:_mercury Action:[SCNAction moveTo:SCNVector3Make(x[0], y[0], z[0]) duration:1]];
     [self setInOrbit:_venus Action:[SCNAction moveTo:SCNVector3Make(x[1], y[1], z[1]) duration:1]];
     [self setInOrbit:_earth Action:[SCNAction moveTo:SCNVector3Make(x[2], y[2], z[2]) duration:1]];
@@ -386,7 +386,7 @@ float z[9];
     
     self.scene.paused = NO;
     _flag = YES;
-
+    
     
 }
 
@@ -394,7 +394,7 @@ float z[9];
     _picker.hidden = YES;
     self.scene.paused = NO;
     _flag = YES;
-
+    
 }
 
 

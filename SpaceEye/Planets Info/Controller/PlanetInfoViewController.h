@@ -10,4 +10,6 @@
 
 @interface PlanetInfoViewController : UIViewController
 
+@property (strong, nonatomic) NSString *planetName;
+
 @end

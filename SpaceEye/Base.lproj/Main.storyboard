@@ -20,6 +20,65 @@
             </objects>
             <point key="canvasLocation" x="277" y="158"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Tow-Qv-eEI">
+            <objects>
+                <navigationController storyboardIdentifier="PlanetsInfoNavigationController" id="hQH-KS-dCV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xyK-lw-XyD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JVb-ly-2w2" kind="relationship" relationship="rootViewController" id="g7S-E9-SF7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UFz-iL-5bP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="-837"/>
+        </scene>
+        <!--Planet Informations-->
+        <scene sceneID="a3a-rB-us3">
+            <objects>
+                <tableViewController id="JVb-ly-2w2" customClass="PlanetListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="K2L-fh-ae8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlanetName" id="z7Y-iX-g4a">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z7Y-iX-g4a" id="rjW-MT-4IV">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="U6w-Iw-jjy" kind="show" id="1Bn-Mb-Qv2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JVb-ly-2w2" id="fJP-oc-6c6"/>
+                            <outlet property="delegate" destination="JVb-ly-2w2" id="nbR-Kg-Eda"/>
+                            <outletCollection property="gestureRecognizers" destination="PLB-31-edh" appends="YES" id="IAa-jv-f7q"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Planet Informations" id="haG-1d-efH"/>
+                    <connections>
+                        <outlet property="view" destination="K2L-fh-ae8" id="G93-kK-Wa8"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jw5-5K-spI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="PLB-31-edh">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="swapBack:" destination="JVb-ly-2w2" id="3Uc-wc-N6e"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="985" y="-54"/>
+        </scene>
         <!--Planets Informations-->
         <scene sceneID="6hG-Pd-36R">
             <objects>
@@ -33,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="WJ3-Yb-YRz">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jupiter" translatesAutoresizingMaskIntoConstraints="NO" id="vvf-qh-F0p">
                                 <rect key="frame" x="0.0" y="180" width="240" height="240"/>
@@ -45,44 +104,76 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NiG-NN-7bA">
                                 <rect key="frame" x="240" y="0.0" width="360" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PlanetsInfoTableViewCell" rowHeight="72" id="vYR-4a-bOm" customClass="PlanetsTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="360" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vYR-4a-bOm" id="oi4-93-A8V">
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="71.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TextTextTextTextTextTextTextT" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSh-cn-ddF">
+                                                    <rect key="frame" x="153" y="0.0" width="197" height="71.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TextText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFz-6e-8NJ">
+                                                    <rect key="frame" x="10" y="0.0" width="61" height="71.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WSh-cn-ddF" firstAttribute="top" secondItem="oi4-93-A8V" secondAttribute="top" id="1Rp-hh-3HE"/>
+                                                <constraint firstItem="wFz-6e-8NJ" firstAttribute="top" secondItem="oi4-93-A8V" secondAttribute="top" id="68J-9P-eTp"/>
+                                                <constraint firstAttribute="bottom" secondItem="WSh-cn-ddF" secondAttribute="bottom" id="D9O-jC-BGA"/>
+                                                <constraint firstItem="wFz-6e-8NJ" firstAttribute="leading" secondItem="oi4-93-A8V" secondAttribute="leading" constant="10" id="Kjd-WH-VYF"/>
+                                                <constraint firstAttribute="bottom" secondItem="wFz-6e-8NJ" secondAttribute="bottom" id="LAw-Ne-lmz"/>
+                                                <constraint firstAttribute="trailing" secondItem="WSh-cn-ddF" secondAttribute="trailing" constant="10" id="jKJ-r6-oDd"/>
+                                                <constraint firstItem="WSh-cn-ddF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wFz-6e-8NJ" secondAttribute="trailing" constant="10" id="xca-1o-pI7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pointName" destination="wFz-6e-8NJ" id="sQI-zA-WXj"/>
+                                            <outlet property="pointValue" destination="WSh-cn-ddF" id="ceW-M7-5YA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="U6w-Iw-jjy" id="8J2-eb-wwK"/>
+                                    <outlet property="delegate" destination="U6w-Iw-jjy" id="1Lf-89-wJk"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="NiG-NN-7bA" firstAttribute="leading" secondItem="vvf-qh-F0p" secondAttribute="trailing" id="1zn-nW-VHn"/>
-                            <constraint firstAttribute="trailing" secondItem="WJ3-Yb-YRz" secondAttribute="trailing" id="3oM-af-Lmp"/>
-                            <constraint firstItem="WJ3-Yb-YRz" firstAttribute="leading" secondItem="6be-d8-YRr" secondAttribute="leading" id="49t-Bv-eYk"/>
-                            <constraint firstItem="WJ3-Yb-YRz" firstAttribute="top" secondItem="CWg-fa-6cg" secondAttribute="bottom" id="8s6-rh-2vl"/>
-                            <constraint firstItem="NiG-NN-7bA" firstAttribute="top" secondItem="6be-d8-YRr" secondAttribute="topMargin" id="B0m-54-ZNm"/>
-                            <constraint firstItem="vvf-qh-F0p" firstAttribute="centerY" secondItem="6be-d8-YRr" secondAttribute="centerY" id="Mc7-fU-ANv"/>
-                            <constraint firstItem="vvf-qh-F0p" firstAttribute="leading" secondItem="6be-d8-YRr" secondAttribute="leading" id="bey-nu-WYJ"/>
-                            <constraint firstAttribute="trailing" secondItem="NiG-NN-7bA" secondAttribute="trailing" id="cJf-fe-SgT"/>
-                            <constraint firstItem="yUB-05-cEX" firstAttribute="top" secondItem="WJ3-Yb-YRz" secondAttribute="bottom" id="hw5-VG-1UA"/>
-                            <constraint firstItem="yUB-05-cEX" firstAttribute="top" secondItem="NiG-NN-7bA" secondAttribute="bottom" id="vkh-yC-lqF"/>
+                            <constraint firstItem="WJ3-Yb-YRz" firstAttribute="leading" secondItem="6be-d8-YRr" secondAttribute="leading" id="50M-Kc-gnw"/>
+                            <constraint firstAttribute="trailing" secondItem="NiG-NN-7bA" secondAttribute="trailing" id="9qn-D1-B4G"/>
+                            <constraint firstAttribute="trailing" secondItem="WJ3-Yb-YRz" secondAttribute="trailing" id="FPI-KA-tCL"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="NiG-NN-7bA" secondAttribute="bottom" id="KLm-wJ-v61"/>
+                            <constraint firstItem="WJ3-Yb-YRz" firstAttribute="top" secondItem="CWg-fa-6cg" secondAttribute="bottom" id="M8P-VU-4co"/>
+                            <constraint firstItem="vvf-qh-F0p" firstAttribute="centerY" secondItem="6be-d8-YRr" secondAttribute="centerY" id="QaI-QF-Lo5"/>
+                            <constraint firstItem="vvf-qh-F0p" firstAttribute="leading" secondItem="6be-d8-YRr" secondAttribute="leading" id="bFN-OA-XPN"/>
+                            <constraint firstItem="NiG-NN-7bA" firstAttribute="top" secondItem="6be-d8-YRr" secondAttribute="topMargin" id="ixc-Mc-GiB"/>
+                            <constraint firstItem="NiG-NN-7bA" firstAttribute="leading" secondItem="vvf-qh-F0p" secondAttribute="trailing" id="pij-zV-9Ra"/>
+                            <constraint firstItem="yUB-05-cEX" firstAttribute="top" secondItem="WJ3-Yb-YRz" secondAttribute="bottom" id="zGC-Rf-Vff"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="AuY-DU-nAU" appends="YES" id="ZQd-6X-yu2"/>
-                        </connections>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="img" destination="vvf-qh-F0p" id="PXy-ki-YpD"/>
-                        <outlet property="planetInfoTable" destination="NiG-NN-7bA" id="3fk-ye-McF"/>
+                        <outlet property="img" destination="vvf-qh-F0p" id="6Xi-fw-0Gc"/>
+                        <outlet property="planetInfoTable" destination="NiG-NN-7bA" id="2UN-Tm-sGb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0G9-4r-glG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="AuY-DU-nAU">
-                    <rectEdge key="edges" left="YES"/>
-                    <connections>
-                        <action selector="swapBack:" destination="U6w-Iw-jjy" id="oqp-GN-EWP"/>
-                    </connections>
-                </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1291" y="198"/>
+            <point key="canvasLocation" x="2018" y="-76"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background" width="656" height="480"/>
-        <image name="Jupiter" width="684" height="653"/>
+        <image name="Jupiter" width="779" height="773"/>
     </resources>
 </document>

@@ -10,11 +10,9 @@
 
 @interface SEPlanet : NSObject
 
-@property (nonatomic, strong) NSMutableArray * array;
-@property (nonatomic, strong) NSString * key;
-@property (nonatomic, strong) NSString * value;
++ (NSArray*) getPlanetsName;
 
++ (NSDictionary *) getPlanetInfo:(NSString *)planetName;
 
-- (void) test;
 
 @end

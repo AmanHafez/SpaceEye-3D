@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Item 0</key>
+	<key>Mercury</key>
 	<dict>
 		<key>Name</key>
 		<string>Mercury</string>
@@ -43,11 +43,11 @@
 		<key>Number of Moons</key>
 		<string>0</string>
 		<key>Ring System</key>
-		<false/>
+		<string>NO</string>
 		<key>Global Magnetic Field</key>
-		<true/>
+		<string>YES</string>
 	</dict>
-	<key>Item 1</key>
+	<key>Venus</key>
 	<dict>
 		<key>Name</key>
 		<string>Venus</string>
@@ -88,11 +88,11 @@
 		<key>Number of Moons</key>
 		<string>0</string>
 		<key>Ring System</key>
-		<false/>
+		<string>NO</string>
 		<key>Global Magnetic Field</key>
-		<false/>
+		<string>YES</string>
 	</dict>
-	<key>Item 2</key>
+	<key>Earth</key>
 	<dict>
 		<key>Name</key>
 		<string>Earth</string>
@@ -133,56 +133,11 @@
 		<key>Number of Moons</key>
 		<string>1</string>
 		<key>Ring System</key>
-		<false/>
+		<string>NO</string>
 		<key>Global Magnetic Field</key>
-		<true/>
+		<string>YES</string>
 	</dict>
-	<key>Item 3</key>
-	<dict>
-		<key>Name</key>
-		<string>Moon</string>
-		<key>Mass</key>
-		<string>0.073</string>
-		<key>Diameter</key>
-		<string>3475</string>
-		<key>Density</key>
-		<string>3340</string>
-		<key>Gravity</key>
-		<string>1.6</string>
-		<key>Escape Velocity</key>
-		<string>2.4</string>
-		<key>Rotation Period</key>
-		<string>655.7</string>
-		<key>Length of Day</key>
-		<string>708.7</string>
-		<key>Distance from Sun</key>
-		<string>0.384</string>
-		<key>Perihelion</key>
-		<string>0.363</string>
-		<key>Aphelion</key>
-		<string>0.406</string>
-		<key>Orbital Period</key>
-		<string>27.3</string>
-		<key>Orbital Velocity</key>
-		<string>1</string>
-		<key>Orbital Inclination</key>
-		<string>5.1</string>
-		<key>Orbital Eccentricity</key>
-		<string>0.055</string>
-		<key>Obliquity to Orbit</key>
-		<string>6.7</string>
-		<key>Mean Temperature</key>
-		<string>-20</string>
-		<key>Surface Pressure</key>
-		<string>0</string>
-		<key>Number of Moons</key>
-		<string>0</string>
-		<key>Ring System</key>
-		<false/>
-		<key>Global Magnetic Field</key>
-		<false/>
-	</dict>
-	<key>Item 4</key>
+	<key>Mars</key>
 	<dict>
 		<key>Name</key>
 		<string>Mars</string>
@@ -223,11 +178,11 @@
 		<key>Number of Moons</key>
 		<string>2</string>
 		<key>Ring System</key>
-		<false/>
+		<string>NO</string>
 		<key>Global Magnetic Field</key>
-		<false/>
+		<string>YES</string>
 	</dict>
-	<key>Item 5</key>
+	<key>Jupiter</key>
 	<dict>
 		<key>Name</key>
 		<string>Jupiter</string>
@@ -268,11 +223,11 @@
 		<key>Number of Moons</key>
 		<string>67</string>
 		<key>Ring System</key>
-		<true/>
+		<string>YES</string>
 		<key>Global Magnetic Field</key>
-		<true/>
+		<string>YES</string>
 	</dict>
-	<key>Item 6</key>
+	<key>Saturn</key>
 	<dict>
 		<key>Name</key>
 		<string>Saturn</string>
@@ -313,11 +268,11 @@
 		<key>Number of Moons</key>
 		<string>62</string>
 		<key>Ring System</key>
-		<true/>
+		<string>YES</string>
 		<key>Global Magnetic Field</key>
-		<true/>
+		<string>YES</string>
 	</dict>
-	<key>Item 7</key>
+	<key>Uranus</key>
 	<dict>
 		<key>Name</key>
 		<string>Uranus</string>
@@ -358,11 +313,11 @@
 		<key>Number of Moons</key>
 		<string>27</string>
 		<key>Ring System</key>
-		<true/>
+		<string>YES</string>
 		<key>Global Magnetic Field</key>
-		<true/>
+		<string>YES</string>
 	</dict>
-	<key>Item 8</key>
+	<key>Neptune</key>
 	<dict>
 		<key>Name</key>
 		<string>Neptune</string>
@@ -403,11 +358,11 @@
 		<key>Number of Moons</key>
 		<string>14</string>
 		<key>Ring System</key>
-		<true/>
+		<string>YES</string>
 		<key>Global Magnetic Field</key>
-		<true/>
+		<string>YES</string>
 	</dict>
-	<key>Item 9</key>
+	<key>Pluto</key>
 	<dict>
 		<key>Name</key>
 		<string>Pluto</string>
@@ -448,9 +403,9 @@
 		<key>Number of Moons</key>
 		<string>5</string>
 		<key>Ring System</key>
-		<false/>
+		<string>NO</string>
 		<key>Global Magnetic Field</key>
-		<false/>
+		<string>NO</string>
 	</dict>
 </dict>
 </plist>

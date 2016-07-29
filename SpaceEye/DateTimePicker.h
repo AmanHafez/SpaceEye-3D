@@ -2,8 +2,8 @@
 //  DateTimePicker.h
 //  SpaceEye
 //
-//  Created by mac on 7/24/16.
-//  Copyright © 2016 mac. All rights reserved.
+//  Created by  Aman Hafaz on 7/24/16.
+//  Copyright © 2016  Aman Hafaz. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

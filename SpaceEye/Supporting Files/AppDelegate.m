@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "SEPlanet.h"
 
 @interface AppDelegate ()
 
@@ -17,9 +16,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    SEPlanet * p = [[SEPlanet alloc]init];
-    [p test];
-    
     // Override point for customization after application launch.
     return YES;
 }

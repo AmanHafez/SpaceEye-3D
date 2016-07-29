@@ -10,7 +10,7 @@
 #import "SEPlanet.h"
 @interface PlanetsTableViewCell : UITableViewCell
 
-- (void)setPoint:(SEPlanet *)point;
-
+- (void)setPlanetValue:(NSString *)value;
+- (void)setPlanetKey:(NSString *)key;
 
 @end

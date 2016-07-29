@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Saturn.png",
+      "filename" : "planet-saturn.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Saturn-1.png",
+      "filename" : "planet-saturn-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Saturn-2.png",
+      "filename" : "planet-saturn-2.png",
       "scale" : "3x"
     }
   ],

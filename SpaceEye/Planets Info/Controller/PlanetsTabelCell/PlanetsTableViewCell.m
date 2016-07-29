@@ -21,20 +21,16 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
-- (void)setPoint:(SEPlanet *)point {
-    
-    _pointName.text = point.key;
-    _pointValue.text = point.value;
-
+- (void)setPlanetKey:(NSString *)key {
+    _pointName.text = key;
 }
-
+- (void)setPlanetValue:(NSString *)value {
+    _pointValue.text = value;
+}
 @end
