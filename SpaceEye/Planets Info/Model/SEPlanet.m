@@ -12,7 +12,6 @@
 
 @implementation SEPlanet
 
-
 + (NSArray *) getPlanetsName {
     NSDictionary *dictRoot = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SolarSystemData" ofType:@"plist"]];
     NSArray *planetsName = [dictRoot allKeys];
@@ -25,7 +24,5 @@
     NSDictionary *planet = [dictRoot objectForKey:planetName];
     return planet;
 }
-
-
 
 @end

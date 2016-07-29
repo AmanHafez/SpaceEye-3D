@@ -35,6 +35,48 @@
       "idiom" : "iphone",
       "filename" : "iTunesArtwork@2x copy 5.png",
       "scale" : "3x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "iTunesArtwork@2x copy-1.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "iTunesArtwork@2x copy 9.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "iTunesArtwork@2x copy 10.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "iTunesArtwork@2x copy 11.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "iTunesArtwork@2x-2.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "iTunesArtwork@2x copy 5-1.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "83.5x83.5",
+      "idiom" : "ipad",
+      "filename" : "iTunesArtwork@2x copy 12.png",
+      "scale" : "2x"
     }
   ],
   "info" : {

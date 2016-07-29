@@ -112,7 +112,7 @@ float z[9];
 - (void)setupSceneElements : (SCNScene*)scene Node:(SCNNode*)node NodeName:(NSString*)nodeName Action:(SCNAction *)action{
     node =  [scene.rootNode childNodeWithName:nodeName recursively:YES];
     [node runAction:[SCNAction repeatActionForever:action]];
-    [_sun addChildNode:node];
+//    [_sun addChildNode:node];
 }
 
 - (void) setInOrbit: (SCNNode*)node Action:(SCNAction *)action{
@@ -374,14 +374,9 @@ float z[9];
     
     [self setInOrbit:_mercury Action:[SCNAction moveBy:SCNVector3Make(x[0], y[0], z[0]) duration:1]];
     [self setInOrbit:_venus Action:[SCNAction moveBy:SCNVector3Make(x[1], y[1], z[1]) duration:1]];
-    
-    
     [self setInOrbit:_earth Action:[SCNAction moveBy:SCNVector3Make(x[2], y[2], z[2]) duration:1]];
     [self setInOrbit:_mars Action:[SCNAction moveBy:SCNVector3Make(x[3], y[3], z[3]) duration:1]];
     [self setInOrbit:_jupiter Action:[SCNAction moveBy:SCNVector3Make(x[4], y[4], z[4]) duration:1]];
-
-
-    
     [self setInOrbit:_saturn Action:[SCNAction moveBy:SCNVector3Make(x[5], y[5], z[5]) duration:1]];
     [self setInOrbit:_uranus Action:[SCNAction moveBy:SCNVector3Make(x[6], y[6], z[6]) duration:1]];
     [self setInOrbit:_neptune Action:[SCNAction moveBy:SCNVector3Make(x[7], y[7], z[7]) duration:1]];

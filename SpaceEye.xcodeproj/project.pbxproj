@@ -532,6 +532,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Aman.SpaceEye;
 				PRODUCT_NAME = SpaceEye;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -547,6 +548,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Aman.SpaceEye;
 				PRODUCT_NAME = SpaceEye;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
