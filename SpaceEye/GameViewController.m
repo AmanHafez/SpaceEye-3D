@@ -28,13 +28,7 @@
 @property (nonatomic, strong) SCNNode *cameraNode;
 
 @property (nonatomic, getter=isPaused) BOOL paused;
-@property (nonatomic, strong) NSArray *x;
-@property (nonatomic, strong) NSArray *y;
-@property (nonatomic, strong) NSArray *z;
-@property (nonatomic, strong) NSArray *PlanetName;
-@property (nonatomic, strong) NSDictionary *XPosition;
-@property (nonatomic, strong) NSDictionary *YPosition;
-@property (nonatomic, strong) NSDictionary *ZPosition;
+@property (nonatomic, strong) NSString *result;
 @property  BOOL flag;
 @property DateTimePicker *picker;
 
@@ -374,12 +368,29 @@ float z[9];
         
     }
     
-    self.x = [NSArray arrayWithObjects:[NSNumber numberWithFloat:x[0]],[NSNumber numberWithFloat:x[1]],[NSNumber numberWithFloat:x[2]],[NSNumber numberWithFloat:x[3]],[NSNumber numberWithFloat:x[4]],[NSNumber numberWithFloat:x[5]],[NSNumber numberWithFloat:x[6]],[NSNumber numberWithFloat:x[7]],[NSNumber numberWithFloat:x[8]], nil];
     
-    self.y = [NSArray arrayWithObjects:[NSNumber numberWithFloat:y[0]],[NSNumber numberWithFloat:y[1]],[NSNumber numberWithFloat:y[2]],[NSNumber numberWithFloat:y[3]],[NSNumber numberWithFloat:y[4]],[NSNumber numberWithFloat:y[5]],[NSNumber numberWithFloat:y[6]],[NSNumber numberWithFloat:y[7]],[NSNumber numberWithFloat:y[8]], nil];
-    self.z = [NSArray arrayWithObjects:[NSNumber numberWithFloat:z[0]],[NSNumber numberWithFloat:z[1]],[NSNumber numberWithFloat:z[2]],[NSNumber numberWithFloat:z[3]],[NSNumber numberWithFloat:z[4]],[NSNumber numberWithFloat:z[5]],[NSNumber numberWithFloat:z[6]],[NSNumber numberWithFloat:z[7]],[NSNumber numberWithFloat:z[8]], nil];
+    NSArray *merc = [NSArray arrayWithObjects:@"Mercury ",[NSNumber numberWithFloat:x[0]],[NSNumber numberWithFloat:y[0]],[NSNumber numberWithFloat:z[0]] , nil];
+    NSString *result1 = [merc componentsJoinedByString: @","];
+    NSArray *ven = [NSArray arrayWithObjects:@"Venus ",[NSNumber numberWithFloat:x[1]],[NSNumber numberWithFloat:y[1]],[NSNumber numberWithFloat:z[1]] , nil];
+     NSString *result2 = [ven componentsJoinedByString: @","];
+    NSArray *ea = [NSArray arrayWithObjects:@"Earth ",[NSNumber numberWithFloat:x[2]],[NSNumber numberWithFloat:y[2]],[NSNumber numberWithFloat:z[2]] , nil];
+      NSString *result3 = [ea componentsJoinedByString: @","];
+    NSArray *mar = [NSArray arrayWithObjects:@"Mars ",[NSNumber numberWithFloat:x[3]],[NSNumber numberWithFloat:y[3]],[NSNumber numberWithFloat:z[3]] , nil];
+     NSString *result4 =  [mar componentsJoinedByString: @","];
+     NSArray *jup = [NSArray arrayWithObjects:@"Jupiter ",[NSNumber numberWithFloat:x[4]],[NSNumber numberWithFloat:y[4]],[NSNumber numberWithFloat:z[4]] , nil];
+      NSString *result5 = [jup componentsJoinedByString: @","];
+     NSArray *sat = [NSArray arrayWithObjects:@"Saturn ",[NSNumber numberWithFloat:x[5]],[NSNumber numberWithFloat:y[5]],[NSNumber numberWithFloat:z[5]] , nil];
+      NSString *result6 = [sat componentsJoinedByString: @","];
+     NSArray *ura = [NSArray arrayWithObjects:@"Uranus ",[NSNumber numberWithFloat:x[6]],[NSNumber numberWithFloat:y[6]],[NSNumber numberWithFloat:z[6]] , nil];
+     NSString *result7 =  [ura componentsJoinedByString: @","];
+     NSArray *nep = [NSArray arrayWithObjects:@"Neptune ",[NSNumber numberWithFloat:x[7]],[NSNumber numberWithFloat:y[7]],[NSNumber numberWithFloat:z[7]] , nil];
+     NSString *result8 =  [nep componentsJoinedByString: @","];
+     NSArray *plu = [NSArray arrayWithObjects:@"Pluto ",[NSNumber numberWithFloat:x[8]],[NSNumber numberWithFloat:y[8]],[NSNumber numberWithFloat:z[8]] , nil];
+     NSString *result9 = [plu componentsJoinedByString: @","];
     
-    
+    self.result = [NSString stringWithFormat:@"\n%@\n %@\n %@\n %@\n %@\n %@\n %@\n %@\n %@", result1, result2, result3, result4, result5, result6, result7, result8, result9];
+   
+    NSLog(@"%@", self.result);
     //self.scene.paused = NO;
     
 }
@@ -388,6 +399,20 @@ float z[9];
 
 -(void)donePressed{
     _picker.hidden = YES;
+    
+    
+    
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Planets Positions:"
+                                                                   message:self.result
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+
+    
     
     [self.mercury runAction:[SCNAction moveBy:SCNVector3Make(x[0], y[0], z[0]) duration:1]];
     [self.venus runAction:[SCNAction moveBy:SCNVector3Make(x[1], y[1], z[1]) duration:1]];
@@ -409,10 +434,9 @@ float z[9];
     [self.sun addChildNode:self.uranus];
     [self.sun addChildNode:self.neptune];
     [self.sun addChildNode:self.pluto];
-
-
     
-    
+    self.sun.paused = YES;
+
     self.scene.paused = NO;
     _flag = YES;
     
